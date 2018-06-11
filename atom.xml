@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-11T10:36:20.327Z</updated>
+  <updated>2018-06-11T10:51:05.449Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,11 +21,12 @@
     <link href="http://yoursite.com/2018/06/11/linux-%E9%85%8D%E7%BD%AENginx/"/>
     <id>http://yoursite.com/2018/06/11/linux-配置Nginx/</id>
     <published>2018-06-11T10:22:25.000Z</published>
-    <updated>2018-06-11T10:36:20.327Z</updated>
+    <updated>2018-06-11T10:51:05.449Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。&lt;br&gt;
+      &lt;p&gt;Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。&lt;/p&gt;
+&lt;p&gt;首先下载资源包：&lt;br&gt;　安装Nginx之前，首先要安装好编译环境gcc和g++，然后以CentOS为例安装Nginx，安装Nginx需要PRCE库、zlib库和ssl的支持，除了ssl外其他的我们都是去官网下载：&lt;br&gt;　　Nginx：&lt;a href=&quot;http://nginx.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://nginx.org/&lt;/a&gt;&lt;br&gt;　　PCRE：&lt;a href=&quot;http://www.pcre.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.pcre.org/&lt;/a&gt;&lt;br&gt;　　zlib：&lt;a href=&quot;http://www.zlib.net/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.zlib.net/&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
