@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-11T10:51:05.449Z</updated>
+  <updated>2018-06-11T11:03:25.367Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/06/11/linux-%E9%85%8D%E7%BD%AENginx/"/>
     <id>http://yoursite.com/2018/06/11/linux-配置Nginx/</id>
     <published>2018-06-11T10:22:25.000Z</published>
-    <updated>2018-06-11T10:51:05.449Z</updated>
+    <updated>2018-06-11T11:03:25.367Z</updated>
     
     <summary type="html">
     
@@ -30,6 +30,12 @@
     
     </summary>
     
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="nginx" scheme="http://yoursite.com/tags/nginx/"/>
     
   </entry>
   
