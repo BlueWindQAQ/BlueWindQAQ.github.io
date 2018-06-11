@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>时光的小脚丫丶</title>
+  <icon>https://www.gravatar.com/avatar/49da9bba1fc0abe6d4aa4c1385bac956</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-06-11T03:48:49.354Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Smartfoot</name>
+    <email>lvchengfengit@163.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>oracle 锁表查询和解锁</title>
+    <link href="http://yoursite.com/2018/06/07/oracle-%E9%94%81%E8%A1%A8%E6%9F%A5%E8%AF%A2%E5%92%8C%E8%A7%A3%E9%94%81/"/>
+    <id>http://yoursite.com/2018/06/07/oracle-锁表查询和解锁/</id>
+    <published>2018-06-07T07:34:04.000Z</published>
+    <updated>2018-06-11T03:48:49.354Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-查看里面的锁&quot;&gt;&lt;a href=&quot;#1-查看里面的锁&quot; class=&quot;headerlink&quot; title=&quot;1.查看里面的锁&quot;&gt;&lt;/a&gt;1.查看里面的锁&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;SELECT
+    b. OWNER,
+    b.object_name,
+    l.session_id,
+    l.locked_mode
+FROM
+    v$locked_object l,
+    dba_objects b
+WHERE
+    b.object_id = l.object_id;
+
+select t2.username,t2.sid,t2.serial#,t2.logon_time
+from v$locked_object t1,v$session t2
+where t1.session_id=t2.sid order by t2.logon_time
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="oracle" scheme="http://yoursite.com/tags/oracle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试文章</title>
+    <link href="http://yoursite.com/2018/06/07/Testing/"/>
+    <id>http://yoursite.com/2018/06/07/Testing/</id>
+    <published>2018-06-07T06:19:46.000Z</published>
+    <updated>2018-06-11T03:37:28.180Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="Testing" scheme="http://yoursite.com/categories/Testing/"/>
+    
+    
+      <category term="Testing" scheme="http://yoursite.com/tags/Testing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo常用命令笔记</title>
+    <link href="http://yoursite.com/2018/06/06/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2018/06/06/hexo常用命令笔记/</id>
+    <published>2018-06-06T03:52:49.000Z</published>
+    <updated>2018-06-11T03:47:47.346Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;hexo&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;npm install hexo -g #安装&lt;br&gt;npm update hexo -g #升级&lt;br&gt;hexo init #初始化&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据库字段加解密处理</title>
+    <link href="http://yoursite.com/2018/06/05/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E6%AE%B5%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%A4%84%E7%90%86/"/>
+    <id>http://yoursite.com/2018/06/05/数据库字段加解密处理/</id>
+    <published>2018-06-05T06:35:03.000Z</published>
+    <updated>2018-06-11T03:47:23.896Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;解决场景：&lt;/strong&gt;&lt;br&gt;  需要对应用数据存储时采取加密，比如手机号码、地址、证件号&lt;br&gt;&lt;br&gt;&lt;strong&gt;方案：&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/AzRjjpQ.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="加密" scheme="http://yoursite.com/tags/%E5%8A%A0%E5%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/06/05/hello-world/"/>
+    <id>http://yoursite.com/2018/06/05/hello-world/</id>
+    <published>2018-06-05T06:24:49.544Z</published>
+    <updated>2018-06-11T03:48:15.315Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
