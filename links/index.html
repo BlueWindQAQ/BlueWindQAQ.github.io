@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="时光的小脚丫丶">
 <meta property="og:description" content="hexo 学习 Hexo的Next主题详细配置：https://www.jianshu.com/p/3a05351a37dc Hexo博客搭建及NexT主题个性化设置：https://www.jianshu.com/p/e75f208b5290 Hexo免费搭建一个属于自己的博客：https://www.jianshu.com/p/51617690f8ca Hexo+NexT 主题配置备忘：ht">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-11T09:11:20.613Z">
+<meta property="og:updated_time" content="2018-06-11T09:48:41.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="链接">
 <meta name="twitter:description" content="hexo 学习 Hexo的Next主题详细配置：https://www.jianshu.com/p/3a05351a37dc Hexo博客搭建及NexT主题个性化设置：https://www.jianshu.com/p/e75f208b5290 Hexo免费搭建一个属于自己的博客：https://www.jianshu.com/p/51617690f8ca Hexo+NexT 主题配置备忘：ht">
@@ -342,6 +342,7 @@
 <li>Hexo免费搭建一个属于自己的博客：<a href="https://www.jianshu.com/p/51617690f8ca" target="_blank" rel="noopener">https://www.jianshu.com/p/51617690f8ca</a></li>
 <li>Hexo+NexT 主题配置备忘：<a href="http://blog.ynxiu.com/2016/hexo-next-theme-optimize.html" target="_blank" rel="noopener">http://blog.ynxiu.com/2016/hexo-next-theme-optimize.html</a></li>
 <li>部署到github：<a href="https://www.cnblogs.com/cherishzy/p/5694658.html" target="_blank" rel="noopener">https://www.cnblogs.com/cherishzy/p/5694658.html</a></li>
+<li>评论系统：<a href="https://blog.csdn.net/blue_zy/article/details/79071414" target="_blank" rel="noopener">https://blog.csdn.net/blue_zy/article/details/79071414</a></li>
 <li>图标库：<a href="https://fontawesome.com/icons" target="_blank" rel="noopener">https://fontawesome.com/icons</a></li>
 </ul>
 
@@ -1077,113 +1078,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("XzyBePMyEqqofImiXeLMTzkF-gzGzoHsz", "MlfsSULof3g12tWCp6160Uld");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 
