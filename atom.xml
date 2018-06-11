@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-11T03:48:49.354Z</updated>
+  <updated>2018-06-11T10:36:20.327Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux 配置Nginx</title>
+    <link href="http://yoursite.com/2018/06/11/linux-%E9%85%8D%E7%BD%AENginx/"/>
+    <id>http://yoursite.com/2018/06/11/linux-配置Nginx/</id>
+    <published>2018-06-11T10:22:25.000Z</published>
+    <updated>2018-06-11T10:36:20.327Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>oracle 锁表查询和解锁</title>
