@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-06-12T02:19:41.197Z</updated>
+  <updated>2018-06-12T07:53:15.808Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有人用古文翻译了当下流行话语，对比一下古文有多美！</title>
+    <link href="http://blog.bestsmartfoot.top/2018/06/12/%E6%9C%89%E4%BA%BA%E7%94%A8%E5%8F%A4%E6%96%87%E7%BF%BB%E8%AF%91%E4%BA%86%E5%BD%93%E4%B8%8B%E6%B5%81%E8%A1%8C%E8%AF%9D%E8%AF%AD%EF%BC%8C%E5%AF%B9%E6%AF%94%E4%B8%80%E4%B8%8B%E5%8F%A4%E6%96%87%E6%9C%89%E5%A4%9A%E7%BE%8E%EF%BC%81/"/>
+    <id>http://blog.bestsmartfoot.top/2018/06/12/有人用古文翻译了当下流行话语，对比一下古文有多美！/</id>
+    <published>2018-06-12T07:51:37.000Z</published>
+    <updated>2018-06-12T07:53:15.808Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="摘录" scheme="http://blog.bestsmartfoot.top/categories/%E6%91%98%E5%BD%95/"/>
+    
+    
+      <category term="今文古译" scheme="http://blog.bestsmartfoot.top/tags/%E4%BB%8A%E6%96%87%E5%8F%A4%E8%AF%91/"/>
+    
+  </entry>
   
   <entry>
     <title>linux 配置Nginx</title>
@@ -74,32 +100,6 @@ where t1.session_id=t2.sid order by t2.logon_time
   </entry>
   
   <entry>
-    <title>测试文章</title>
-    <link href="http://blog.bestsmartfoot.top/2018/06/07/Testing/"/>
-    <id>http://blog.bestsmartfoot.top/2018/06/07/Testing/</id>
-    <published>2018-06-07T06:19:46.000Z</published>
-    <updated>2018-06-11T03:37:28.180Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-      <category term="Testing" scheme="http://blog.bestsmartfoot.top/categories/Testing/"/>
-    
-    
-      <category term="Testing" scheme="http://blog.bestsmartfoot.top/tags/Testing/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo常用命令笔记</title>
     <link href="http://blog.bestsmartfoot.top/2018/06/06/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
     <id>http://blog.bestsmartfoot.top/2018/06/06/hexo常用命令笔记/</id>
@@ -139,28 +139,6 @@ where t1.session_id=t2.sid order by t2.logon_time
     
     
       <category term="加密" scheme="http://blog.bestsmartfoot.top/tags/%E5%8A%A0%E5%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://blog.bestsmartfoot.top/2018/06/05/hello-world/"/>
-    <id>http://blog.bestsmartfoot.top/2018/06/05/hello-world/</id>
-    <published>2018-06-05T06:24:49.544Z</published>
-    <updated>2018-06-11T03:48:15.315Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
     
   </entry>
   

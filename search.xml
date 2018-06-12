@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[有人用古文翻译了当下流行话语，对比一下古文有多美！]]></title>
+    <url>%2F2018%2F06%2F12%2F%E6%9C%89%E4%BA%BA%E7%94%A8%E5%8F%A4%E6%96%87%E7%BF%BB%E8%AF%91%E4%BA%86%E5%BD%93%E4%B8%8B%E6%B5%81%E8%A1%8C%E8%AF%9D%E8%AF%AD%EF%BC%8C%E5%AF%B9%E6%AF%94%E4%B8%80%E4%B8%8B%E5%8F%A4%E6%96%87%E6%9C%89%E5%A4%9A%E7%BE%8E%EF%BC%81%2F</url>
+    <content type="text"><![CDATA[有人用古文翻译了当下流行话语，对比一下古文有多美！ 【一】 原文：每天都被自己帅到睡不着翻译：玉树临风美少年，揽镜自顾夜不眠。 原文：有钱，任性。翻译：家有千金，行止由心。 原文：丑的人都睡了，帅的人还醒着。翻译：玉树立风前，驴骡正酣眠。 原文：主要看气质。翻译：请君莫羡解语花，腹有诗书气自华。 原文：也是醉了。翻译：行迈靡靡，中心如醉。 【二】 原文：人要是没有理想，和咸鱼有什么区别。翻译：涸辙遗鲋，旦暮成枯；人而无志，与彼何殊。 原文：别睡了起来嗨。翻译：昼短苦夜长，何不秉烛游。 原文：不要在意这些细节。翻译：欲图大事，莫拘小节。 原文：你这么牛，家里人知道么。翻译：腰中雄剑长三尺，君家严慈知不知。 原文：心好累。翻译：形若槁骸，心如死灰。 【三】 原文：我的内心几乎是崩溃的。翻译：方寸淆乱，灵台崩摧。 原文：你们城里人真会玩。翻译：城中戏一场，山民笑断肠。 原文：我单方面宣布和xx结婚。翻译：愿出一家之言，以结两姓之好。 原文：重要的事说三遍。翻译：一言难尽意，三令作五申。 原文：世界那么大，我想去看看。翻译：天高地阔，欲往观之。 【四】 原文：明明可以靠脸吃饭，偏偏要靠才华。翻译：中华儿女多奇志，不爱红装爱才智。 原文：我读书少，你不要骗我。翻译：君莫欺我不识字，人间安得有此事。 原文：不作死就不会死，为什么不明白。翻译：幸无白刃驱向前，何用将身自弃捐。 原文：你不是一个人在战斗。翻译：岂曰无衣，与子同袍。 原文：我有知识我自豪。翻译：腹有诗书气自华。 原文：说的好有道理，我竟无言以对。翻译：斯言甚善，余不得赞一词。 【五】 原文：秀恩爱，死的快。翻译：爱而不藏，自取其亡。 原文：吓死宝宝了。翻译：堪惊小儿啼，能开长者颐。 原文：沉默不都是金子，有时候还是孙子。翻译：圣人不言如桃李，小民不言若木鸡。 原文：备胎。翻译：章台之柳，已折他人；玄都之花，未改前度。 原文：屌丝终有逆袭日翻译：王侯将相，宁有种乎？]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>今文古译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux 配置Nginx]]></title>
     <url>%2F2018%2F06%2F11%2Flinux-%E9%85%8D%E7%BD%AENginx%2F</url>
     <content type="text"><![CDATA[Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。 首先下载资源包： 安装Nginx之前，首先要安装好编译环境gcc和g++，然后以CentOS为例安装Nginx，安装Nginx需要PRCE库、zlib库和ssl的支持，除了ssl外其他的我们都是去官网下载： Nginx：http://nginx.org/ PCRE：http://www.pcre.org/ zlib：http://www.zlib.net/ 安装所需环境一. gcc 安装安装 nginx 需要先将官网下载的源码进行编译，编译依赖 gcc 环境，如果没有 gcc 环境，则需要安装：yum install gcc-c++ 二. PCRE pcre-devel 安装PCRE(Perl Compatible Regular Expressions) 是一个Perl库，包括 perl 兼容的正则表达式库。nginx 的 http 模块使用 pcre 来解析正则表达式，所以需要在 linux 上安装 pcre 库，pcre-devel 是使用 pcre 开发的一个二次开发库。nginx也需要此库。命令： yum install -y pcre pcre-devel 三. zlib 安装zlib 库提供了很多种压缩和解压缩的方式， nginx 使用 zlib 对 http 包的内容进行 gzip ，所以需要在 Centos 上安装 zlib 库。yum install -y zlib zlib-devel 四. OpenSSL 安装OpenSSL 是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。nginx 不仅支持 http 协议，还支持 https（即在ssl协议上传输http），所以需要在 Centos 安装 OpenSSL 库。 yum install -y openssl openssl-devel 安装Nginx：解压Nginx压缩包tar -xvzf nginx-1.9.8.tar.gz，进入解压后文件夹配置：./configure –prefix=/usr/local/nginx –with-http_stub_status_module –with-http_ssl_module –with-http_realip_module 编译 # make 安装 # make install 检查是否安装成功 cd /usr/local/nginx/sbin ./nginx -t 结果显示： nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful 配置防火墙80端口 #修改防火墙配置： # vi + /etc/sysconfig/iptables #添加配置项 -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT #重启防火墙 # service iptables restart 启动停止重启与测试1.启动 12345#方法1# /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf#方法2# cd /usr/local/nginx/sbin# ./nginx 2.停止 12345678#查询nginx主进程号 ps -ef | grep nginx#停止进程 kill -QUIT 主进程号 #快速停止 kill -TERM 主进程号 #强制停止 pkill -9 nginx 3.重启(首次启动需：/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf) 1/usr/local/nginx/sbin/nginx -s reload 4.测试 12#测试端口 netstat -na | grep 80]]></content>
@@ -24,17 +35,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[测试文章]]></title>
-    <url>%2F2018%2F06%2F07%2FTesting%2F</url>
-    <content type="text"><![CDATA[第一章创建 Hexo 主题非常容易，您只要在 themes 文件夹内，新增一个任意名称的文件夹，并修改 _config.yml 内的 theme 设定，即可切换主题。一个主题可能会有以下的结构： 第二章学习文档API]]></content>
-      <categories>
-        <category>Testing</category>
-      </categories>
-      <tags>
-        <tag>Testing</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[hexo常用命令笔记]]></title>
     <url>%2F2018%2F06%2F06%2Fhexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[hexo npm install hexo -g #安装npm update hexo -g #升级hexo init #初始化 简写 hexo n “我的博客” == hexo new “我的博客” #新建文章 hexo p == hexo publish hexo g == hexo generate#生成 hexo s == hexo server #启动服务预览 hexo d == hexo deploy#部署 服务器 hexo server #Hexo 会监视文件变动并自动更新，您无须重启服务器。hexo server -s #静态模式hexo server -p 5000 #更改端口hexo server -i 192.168.1.1 #自定义 IPhexo clean #清除缓存 网页正常情况下可以忽略此条命令hexo g #生成静态网页hexo d #开始部署 监视文件变动 hexo generate #使用 Hexo 生成静态文件快速而且简单hexo generate –watch #监视文件变动 完成后部署两个命令的作用是相同的 hexo generate –deployhexo deploy –generatehexo deploy -ghexo server -g 草稿 hexo publish [layout] 模版 hexo new “postName” #新建文章hexo new page “pageName” #新建页面hexo generate #生成静态页面至public目录hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）hexo deploy #将.deploy目录部署到GitHub hexo new [layout] hexo new photo “My Gallery”hexo new “Hello World” –lang tw 变量 描述 layout 布局 title 标题 date 文件建立日期 12345678title: 使用Hexo搭建个人博客&lt;br&gt;layout: post&lt;br&gt;date: 2014-03-03 19:07:43&lt;br&gt;comments: true&lt;br&gt;categories: Blog&lt;br&gt;tags: [Hexo]&lt;br&gt;keywords: Hexo, Blog&lt;br&gt;description: 生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。 模版（Scaffold） hexo new photo “My Gallery” 变量 描述 layout 布局 title 标题 date 文件建立日期 设置文章摘要以上是文章摘要&lt;!--more--&gt; 以下是余下全文 写作 hexo new page hexo new post 变量 描述 :title 标题 :year 建立的年份（4 位数） :month 建立的月份（2 位数） :i_month 建立的月份（去掉开头的零） :day 建立的日期（2 位数） :i_day 建立的日期（去掉开头的零） 推送到服务器上 hexo n #写文章hexo g #生成hexo d #部署 #可与hexo g合并为 hexo d -g 报错1.找不到git部署1ERROR Deployer not found: git 2.解决方法 npm install hexo-deployer-git –save 3.部署类型设置githexo 3.0 部署类型不再是github，_config.yml 中修改 123456# Deployment## Docs: http://hexo.io/docs/deployment.htmldeploy: type: git repository: git@***.github.com:***/***.github.io.git branch: master 4. xcodebuildxcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory ‘/Library/Developer/CommandLineTools’ is a command line tools instance npm install bcrypt 5. RSS不显示安装RSS插件 npm install hexo-generator-feed –save 开启RSS功能编辑hexo/_config.yml，添加如下代码： 1rss: /atom.xml #rss地址 默认即可 开启评论1.我使用多说代替自带的评论，在多说 网站注册 &gt; 后台管理 &gt; 添加新站点 &gt; 工具 === 复制通用代码 里面有 short_name 1.在根目录 _config.yml 添加一行 disqus_shortname: jslite 是在多说注册时产生的 2.复制到 themes\landscape\layout\_partial\article.ejs 把 1234567&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;&lt;section id=&quot;comments&quot;&gt;&lt;div id=&quot;disqus_thread&quot;&gt; &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;//disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;&lt;/div&gt;&lt;/section&gt;&lt;% &#125; %&gt; 改为 1234567891011121314151617181920&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt; &lt;section id=&quot;comments&quot;&gt; &lt;!-- 多说评论框 start --&gt; &lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;&quot; data-title=&quot;&lt;%= post.title %&gt;&quot; data-url=&quot;&lt;%= page.permalink %&gt;&quot;&gt;&lt;/div&gt; &lt;!-- 多说评论框 end --&gt; &lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt; &lt;script type=&quot;text/javascript&quot;&gt; var duoshuoQuery = &#123;short_name:&apos;&lt;%= config.disqus_shortname %&gt;&apos;&#125;; (function() &#123; var ds = document.createElement(&apos;script&apos;); ds.type = &apos;text/javascript&apos;;ds.async = true; ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;; ds.charset = &apos;UTF-8&apos;; (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds); &#125;)(); &lt;/script&gt; &lt;!-- 多说公共JS代码 end --&gt; &lt;/section&gt;&lt;% &#125; %&gt;]]></content>
@@ -55,10 +55,5 @@
       <tags>
         <tag>加密</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F06%2F05%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
