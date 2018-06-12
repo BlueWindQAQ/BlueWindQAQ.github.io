@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://bluewindqaq.github.io/"/>
   <updated>2018-06-11T11:03:25.367Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://bluewindqaq.github.io/</id>
   
   <author>
     <name>Smartfoot</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>linux 配置Nginx</title>
-    <link href="http://yoursite.com/2018/06/11/linux-%E9%85%8D%E7%BD%AENginx/"/>
-    <id>http://yoursite.com/2018/06/11/linux-配置Nginx/</id>
+    <link href="https://bluewindqaq.github.io/2018/06/11/linux-%E9%85%8D%E7%BD%AENginx/"/>
+    <id>https://bluewindqaq.github.io/2018/06/11/linux-配置Nginx/</id>
     <published>2018-06-11T10:22:25.000Z</published>
     <updated>2018-06-11T11:03:25.367Z</updated>
     
@@ -30,19 +30,19 @@
     
     </summary>
     
-      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+      <category term="linux" scheme="https://bluewindqaq.github.io/categories/linux/"/>
     
     
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+      <category term="linux" scheme="https://bluewindqaq.github.io/tags/linux/"/>
     
-      <category term="nginx" scheme="http://yoursite.com/tags/nginx/"/>
+      <category term="nginx" scheme="https://bluewindqaq.github.io/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>oracle 锁表查询和解锁</title>
-    <link href="http://yoursite.com/2018/06/07/oracle-%E9%94%81%E8%A1%A8%E6%9F%A5%E8%AF%A2%E5%92%8C%E8%A7%A3%E9%94%81/"/>
-    <id>http://yoursite.com/2018/06/07/oracle-锁表查询和解锁/</id>
+    <link href="https://bluewindqaq.github.io/2018/06/07/oracle-%E9%94%81%E8%A1%A8%E6%9F%A5%E8%AF%A2%E5%92%8C%E8%A7%A3%E9%94%81/"/>
+    <id>https://bluewindqaq.github.io/2018/06/07/oracle-锁表查询和解锁/</id>
     <published>2018-06-07T07:34:04.000Z</published>
     <updated>2018-06-11T03:48:49.354Z</updated>
     
@@ -66,17 +66,17 @@ where t1.session_id=t2.sid order by t2.logon_time
     
     </summary>
     
-      <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="https://bluewindqaq.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="oracle" scheme="http://yoursite.com/tags/oracle/"/>
+      <category term="oracle" scheme="https://bluewindqaq.github.io/tags/oracle/"/>
     
   </entry>
   
   <entry>
     <title>测试文章</title>
-    <link href="http://yoursite.com/2018/06/07/Testing/"/>
-    <id>http://yoursite.com/2018/06/07/Testing/</id>
+    <link href="https://bluewindqaq.github.io/2018/06/07/Testing/"/>
+    <id>https://bluewindqaq.github.io/2018/06/07/Testing/</id>
     <published>2018-06-07T06:19:46.000Z</published>
     <updated>2018-06-11T03:37:28.180Z</updated>
     
@@ -92,17 +92,17 @@ where t1.session_id=t2.sid order by t2.logon_time
     
     </summary>
     
-      <category term="Testing" scheme="http://yoursite.com/categories/Testing/"/>
+      <category term="Testing" scheme="https://bluewindqaq.github.io/categories/Testing/"/>
     
     
-      <category term="Testing" scheme="http://yoursite.com/tags/Testing/"/>
+      <category term="Testing" scheme="https://bluewindqaq.github.io/tags/Testing/"/>
     
   </entry>
   
   <entry>
     <title>hexo常用命令笔记</title>
-    <link href="http://yoursite.com/2018/06/06/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2018/06/06/hexo常用命令笔记/</id>
+    <link href="https://bluewindqaq.github.io/2018/06/06/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
+    <id>https://bluewindqaq.github.io/2018/06/06/hexo常用命令笔记/</id>
     <published>2018-06-06T03:52:49.000Z</published>
     <updated>2018-06-11T03:47:47.346Z</updated>
     
@@ -115,17 +115,17 @@ where t1.session_id=t2.sid order by t2.logon_time
     
     </summary>
     
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+      <category term="hexo" scheme="https://bluewindqaq.github.io/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://bluewindqaq.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>数据库字段加解密处理</title>
-    <link href="http://yoursite.com/2018/06/05/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E6%AE%B5%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%A4%84%E7%90%86/"/>
-    <id>http://yoursite.com/2018/06/05/数据库字段加解密处理/</id>
+    <link href="https://bluewindqaq.github.io/2018/06/05/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E6%AE%B5%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%A4%84%E7%90%86/"/>
+    <id>https://bluewindqaq.github.io/2018/06/05/数据库字段加解密处理/</id>
     <published>2018-06-05T06:35:03.000Z</published>
     <updated>2018-06-11T03:47:23.896Z</updated>
     
@@ -135,17 +135,17 @@ where t1.session_id=t2.sid order by t2.logon_time
     
     </summary>
     
-      <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="https://bluewindqaq.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="加密" scheme="http://yoursite.com/tags/%E5%8A%A0%E5%AF%86/"/>
+      <category term="加密" scheme="https://bluewindqaq.github.io/tags/%E5%8A%A0%E5%AF%86/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/06/05/hello-world/"/>
-    <id>http://yoursite.com/2018/06/05/hello-world/</id>
+    <link href="https://bluewindqaq.github.io/2018/06/05/hello-world/"/>
+    <id>https://bluewindqaq.github.io/2018/06/05/hello-world/</id>
     <published>2018-06-05T06:24:49.544Z</published>
     <updated>2018-06-11T03:48:15.315Z</updated>
     
