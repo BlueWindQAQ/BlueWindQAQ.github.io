@@ -103,18 +103,18 @@
 
 
 
-<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在开发过程中我们经常将项目打包成war包，打成war的项目就和可以直接放在tomcat和jetty等中间件中运行。那么jar项目怎么运行呢？最近看到springboot比较流行，好奇下弄了个项目跑了起来，然而springboot是war项目，直接使用主类的main启动项目。那么打包后的项目怎么运行呢，网上查了查，将启动方法放在">
+<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在开发过程中我们经常将项目打包成war包，打成war的项目就和可以直接放在tomcat和jetty等中间件中运行。那么jar项目怎么运行呢？最近看到springboot比较流行，好奇下弄了个项目跑了起来，然而springboot是jar项目，直接使用主类的main启动项目，那么打包后的项目怎么运行呢？网上查了查，将启动方法放在">
 <meta name="keywords" content="jar">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何运行jar程序">
 <meta property="og:url" content="http://blog.bestsmartfoot.top/2018/06/14/article-1/index.html">
 <meta property="og:site_name" content="时光的小脚丫丶">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在开发过程中我们经常将项目打包成war包，打成war的项目就和可以直接放在tomcat和jetty等中间件中运行。那么jar项目怎么运行呢？最近看到springboot比较流行，好奇下弄了个项目跑了起来，然而springboot是war项目，直接使用主类的main启动项目。那么打包后的项目怎么运行呢，网上查了查，将启动方法放在">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在开发过程中我们经常将项目打包成war包，打成war的项目就和可以直接放在tomcat和jetty等中间件中运行。那么jar项目怎么运行呢？最近看到springboot比较流行，好奇下弄了个项目跑了起来，然而springboot是jar项目，直接使用主类的main启动项目，那么打包后的项目怎么运行呢？网上查了查，将启动方法放在">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-14T08:49:42.938Z">
+<meta property="og:updated_time" content="2018-06-14T08:54:09.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何运行jar程序">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在开发过程中我们经常将项目打包成war包，打成war的项目就和可以直接放在tomcat和jetty等中间件中运行。那么jar项目怎么运行呢？最近看到springboot比较流行，好奇下弄了个项目跑了起来，然而springboot是war项目，直接使用主类的main启动项目。那么打包后的项目怎么运行呢，网上查了查，将启动方法放在">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在开发过程中我们经常将项目打包成war包，打成war的项目就和可以直接放在tomcat和jetty等中间件中运行。那么jar项目怎么运行呢？最近看到springboot比较流行，好奇下弄了个项目跑了起来，然而springboot是jar项目，直接使用主类的main启动项目，那么打包后的项目怎么运行呢？网上查了查，将启动方法放在">
 
 
 
@@ -441,7 +441,7 @@
       
 
       
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在开发过程中我们经常将项目打包成war包，打成war的项目就和可以直接放在tomcat和jetty等中间件中运行。那么jar项目怎么运行呢？最近看到springboot比较流行，好奇下弄了个项目跑了起来，然而springboot是war项目，直接使用主类的main启动项目。那么打包后的项目怎么运行呢，网上查了查，将启动方法放在这里，以便记忆.<br><a id="more"></a></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在开发过程中我们经常将项目打包成war包，打成war的项目就和可以直接放在tomcat和jetty等中间件中运行。那么jar项目怎么运行呢？最近看到springboot比较流行，好奇下弄了个项目跑了起来，然而springboot是jar项目，直接使用主类的main启动项目，那么打包后的项目怎么运行呢？网上查了查，将启动方法放在这里，以便记忆。<br><a id="more"></a></p>
 <h2 id="Windows系统运行"><a href="#Windows系统运行" class="headerlink" title="Windows系统运行"></a>Windows系统运行</h2><p>使用dos命令进入jar所在的目录，直接执行执行命令：<br>    <code>java -jar xxx.jar</code><br>可按CTRL + C打断程序运行，或直接关闭窗口，程序退出</p>
 <h2 id="linux系统运行"><a href="#linux系统运行" class="headerlink" title="linux系统运行"></a>linux系统运行</h2><p>方式一：<br>    <code>java -jar XXX.jar</code><br>特点：当前ssh窗口被锁定，可按CTRL + C打断程序运行，或直接关闭窗口，程序退出<br>方式二：<br>    <code>java -jar XXX.jar &amp;</code><br>特点：当前ssh窗口不被锁定，但是当窗口关闭时，程序中止运行。<br>方式三：<br>    <code>nohup java -jar XXX.jar &amp;</code><br>nohup 意思是不挂断运行命令,当账户退出或终端关闭时,程序仍然运行<br>当用 nohup 命令执行作业时，缺省情况下该作业的所有输出被重定向到nohup.out的文件中，除非另外指定了输出文件。<br>方式四：<br>    <code>nohup java -jar XXX.jar &gt;temp.txt &amp;</code><br>解释下 &gt;temp.txt<br>command &gt;out.file<br>command &gt;out.file是将command的输出重定向到out.file文件，即输出内容不打印到屏幕上，而是输出到out.file文件中。<br>可通过jobs命令查看后台运行任务<br>    <code>jobs</code><br>那么就会列出所有后台执行的作业，并且每个作业前面都有个编号。<br>如果想将某个作业调回前台控制，只需要 fg + 编号即可。<br>    <code>fg 23</code><br>查看某端口占用的线程的pid<br>    <code>netstat -nlp |grep :9181</code></p>
 
