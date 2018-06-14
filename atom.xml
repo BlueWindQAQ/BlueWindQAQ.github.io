@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-06-12T09:01:42.383Z</updated>
+  <updated>2018-06-14T08:49:42.938Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何运行jar程序</title>
+    <link href="http://blog.bestsmartfoot.top/2018/06/14/article-1/"/>
+    <id>http://blog.bestsmartfoot.top/2018/06/14/article-1/</id>
+    <published>2018-06-14T07:43:53.000Z</published>
+    <updated>2018-06-14T08:49:42.938Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在开发过程中我们经常将项目打包成war包，打成war的项目就和可以直接放在tomcat和jetty等中间件中运行。那么jar项目怎么运行呢？最近看到springboot比较流行，好奇下弄了个项目跑了起来，然而springboot是war项目，直接使用主类的main启动项目。那么打包后的项目怎么运行呢，网上查了查，将启动方法放在这里，以便记忆.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.bestsmartfoot.top/categories/linux/"/>
+    
+    
+      <category term="jar" scheme="http://blog.bestsmartfoot.top/tags/jar/"/>
+    
+  </entry>
   
   <entry>
     <title>有人用古文翻译了当下流行话语，对比一下古文有多美！</title>
