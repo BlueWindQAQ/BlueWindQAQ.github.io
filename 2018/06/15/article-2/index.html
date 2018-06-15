@@ -119,7 +119,7 @@
 <meta property="og:image" content="https://i.imgur.com/QPE7nSX.png">
 <meta property="og:image" content="https://i.imgur.com/hfIIV1L.png">
 <meta property="og:image" content="https://i.imgur.com/888WcC9.png">
-<meta property="og:updated_time" content="2018-06-15T08:25:26.413Z">
+<meta property="og:updated_time" content="2018-06-15T10:46:02.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSL证书让网站从HTTP换成HTTPS">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;HTTP 协议是不加密传输数据的，也就是用户跟你的网站之间传递数据有可能在途中被截获，破解传递的真实内容，所以使用不加密的 HTTP 的网站是不太安全的。所以， Google 的 Chrome 浏览器将在 2017 年 1 月开始，标记使用不加密的 HTTP 协议的网站为 Not Secure，不安全。 如何改变呢">
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  763
+                  762
                 </span>
               
 
@@ -443,7 +443,7 @@
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP 协议是不加密传输数据的，也就是用户跟你的网站之间传递数据有可能在途中被截获，破解传递的真实内容，所以使用不加密的 HTTP 的网站是不太安全的。所以， Google 的 Chrome 浏览器将在 2017 年 1 月开始，标记使用不加密的 HTTP 协议的网站为 Not Secure，不安全。</p>
 <p>如何改变呢，有免费的吗？<br><a id="more"></a><br>我的服务器和域名都是阿里云申请的，所以下面方法基于阿里云操作。</p>
 <h2 id="证书申请"><a href="#证书申请" class="headerlink" title="证书申请"></a>证书申请</h2><p>登录阿里云后台，找到，产品与服务-》安全（云盾）-》SSL证书（应用安全），找到购买证书<br><img src="https://i.imgur.com/BBN6e5G.png" alt=""><br>进入购买界面后选择”免费型DV SSL”证书，如下图：<br><img src="https://i.imgur.com/4LTM5SS.png" alt=""><br>订单完成后，在订单页面点击“补全”，补全域名（注意现在免费的证书只能使用填写一个域名，且不支持通配符域名配置，因此不支持域名下的二级域名安全认证），然后填写个人信息，按图填写即可：<br><img src="https://i.imgur.com/jTQkwaA.png" alt=""><br><img src="https://i.imgur.com/Niz6XKY.png" alt=""><br><img src="https://i.imgur.com/McuFsoD.png" alt=""><br>申请审核通过后会收到邮件，意思是云盾证书开通成功</p>
-<h2 id="配置SSL证书"><a href="#配置SSL证书" class="headerlink" title="配置SSL证书"></a>配置SSL证书</h2><p>SSL证书审核通过后在之前的订单页面就可以看到证书下载入口<br><img src="https://i.imgur.com/7XtyGA7.png" alt=""><br>进入下载页面，点击下载按钮“下载证书for Nginx”，下载证书，然后按照提示操作即可<br><img src="https://i.imgur.com/QPE7nSX.png" alt=""><br>以下将阿里是提供的方法：<br>安装证书<br>文件说明：<br>1.证书文件214776764040878.pem，包含两段内容，请不要删除任何一段内容。<br>2.如果是证书系统创建的CSR，还包含：证书私钥文件214776764040878.key。<br>( 1 ) 在Nginx的安装目录下创建cert目录，并且将下载的全部文件拷贝到cert目录中。如果申请证书时是自己创建的CSR文件，请将对应的私钥文件放到cert目录下并且命名为214776764040878.key；<br>( 2 ) 打开 Nginx 安装目录下 conf 目录中的 nginx.conf 文件，找到：</p>
+<h2 id="配置SSL证书"><a href="#配置SSL证书" class="headerlink" title="配置SSL证书"></a>配置SSL证书</h2><p>SSL证书审核通过后在之前的订单页面就可以看到证书下载入口<br><img src="https://i.imgur.com/7XtyGA7.png" alt=""><br>进入下载页面，点击下载按钮“下载证书for Nginx”，下载证书，然后按照提示操作即可<br><img src="https://i.imgur.com/QPE7nSX.png" alt=""><br>以下是阿里提供的方法：<br>安装证书<br>文件说明：<br>1.证书文件214776764040878.pem，包含两段内容，请不要删除任何一段内容。<br>2.如果是证书系统创建的CSR，还包含：证书私钥文件214776764040878.key。<br>( 1 ) 在Nginx的安装目录下创建cert目录，并且将下载的全部文件拷贝到cert目录中。如果申请证书时是自己创建的CSR文件，请将对应的私钥文件放到cert目录下并且命名为214776764040878.key；<br>( 2 ) 打开 Nginx 安装目录下 conf 目录中的 nginx.conf 文件，找到：</p>
 <pre><code># HTTPS server
 # #server {
 # listen 443;
@@ -503,7 +503,7 @@ location / {
   <!--  <p><span>本文标题:</span><a href="/2018/06/15/article-2/">SSL证书让网站从HTTP换成HTTPS</a></p> -->
   <p><span>文章作者:</span><a href="/" title="访问 Smartfoot 的个人博客">Smartfoot</a></p>
   <!-- <p><span>发布时间:</span>2018年06月15日 - 14:06</p> -->
-  <!-- <p><span>最后更新:</span>2018年06月15日 - 16:06</p> -->
+  <!-- <p><span>最后更新:</span>2018年06月15日 - 18:06</p> -->
   <p><span>原始链接:</span><a href="/2018/06/15/article-2/" title="SSL证书让网站从HTTP换成HTTPS">http://blog.bestsmartfoot.top/2018/06/15/article-2/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blog.bestsmartfoot.top/2018/06/15/article-2/"  aria-label="复制成功！"></i></span>
   </p>
