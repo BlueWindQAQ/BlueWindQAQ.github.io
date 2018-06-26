@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-06-23T08:45:29.213Z</updated>
+  <updated>2018-06-23T09:41:53.934Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="http://blog.bestsmartfoot.top/2018/06/23/article-3/"/>
     <id>http://blog.bestsmartfoot.top/2018/06/23/article-3/</id>
     <published>2018-06-23T07:35:00.000Z</published>
-    <updated>2018-06-23T08:45:29.213Z</updated>
+    <updated>2018-06-23T09:41:53.934Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;文字效果如下：&lt;/li&gt;
+&lt;li&gt;文字&lt;code&gt;配置&lt;/code&gt;效果如下：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;span id=&quot;inline-blue&quot;&gt; 站点配置文件 &lt;/span&gt;&lt;br&gt;&lt;span id=&quot;inline-purple&quot;&gt; 主题配置文件 &lt;/span&gt;&lt;br&gt;&lt;span id=&quot;inline-yellow&quot;&gt; 站点配置文件 &lt;/span&gt;&lt;br&gt;&lt;span id=&quot;inline-green&quot;&gt; 主题配置文件 &lt;/span&gt;&lt;br&gt;
     
@@ -44,11 +44,11 @@
     <link href="http://blog.bestsmartfoot.top/2018/06/15/article-2/"/>
     <id>http://blog.bestsmartfoot.top/2018/06/15/article-2/</id>
     <published>2018-06-15T06:46:46.000Z</published>
-    <updated>2018-06-15T10:46:02.802Z</updated>
+    <updated>2018-06-23T09:46:08.001Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;HTTP 协议是不加密传输数据的，也就是用户跟你的网站之间传递数据有可能在途中被截获，破解传递的真实内容，所以使用不加密的 HTTP 的网站是不太安全的。所以， Google 的 Chrome 浏览器将在 2017 年 1 月开始，标记使用不加密的 HTTP 协议的网站为 Not Secure，不安全。&lt;/p&gt;
+      &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;code&gt;HTTP&lt;/code&gt; 协议是不加密传输数据的，也就是用户跟你的网站之间传递数据有可能在途中被截获，破解传递的真实内容，所以使用不加密的 &lt;code&gt;HTTP&lt;/code&gt; 的网站是不太安全的。所以， &lt;code&gt;Google&lt;/code&gt; 的 &lt;code&gt;Chrome&lt;/code&gt; 浏览器将在 2017 年 1 月开始，标记使用不加密的 &lt;code&gt;HTTP&lt;/code&gt; 协议的网站为 &lt;code&gt;Not Secure&lt;/code&gt;，不安全。&lt;/p&gt;
 &lt;p&gt;如何改变呢，有免费的吗？&lt;br&gt;
     
     </summary>
