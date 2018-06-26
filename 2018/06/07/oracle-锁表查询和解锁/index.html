@@ -102,18 +102,18 @@
 
 
 
-<meta name="description" content="1.查看里面的锁SELECT     b. OWNER,     b.object_name,     l.session_id,     l.locked_mode FROM     v$locked_object l,     dba_objects b WHERE     b.object_id = l.object_id;  select t2.username,t2.sid,t2.ser">
+<meta name="description" content="1.查看里面的锁12345678SELECT b. OWNER, b.object_name, l.session_id, l.locked_modeFROM v$locked_object l, dba_objects bWHERE b.object_id = l.object_id;SELECT t2.username, t2.sid, t2.serial #, t2.logon_timeFR">
 <meta name="keywords" content="oracle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="oracle 锁表查询和解锁">
 <meta property="og:url" content="http://blog.bestsmartfoot.top/2018/06/07/oracle-锁表查询和解锁/index.html">
 <meta property="og:site_name" content="时光的小脚丫丶">
-<meta property="og:description" content="1.查看里面的锁SELECT     b. OWNER,     b.object_name,     l.session_id,     l.locked_mode FROM     v$locked_object l,     dba_objects b WHERE     b.object_id = l.object_id;  select t2.username,t2.sid,t2.ser">
+<meta property="og:description" content="1.查看里面的锁12345678SELECT b. OWNER, b.object_name, l.session_id, l.locked_modeFROM v$locked_object l, dba_objects bWHERE b.object_id = l.object_id;SELECT t2.username, t2.sid, t2.serial #, t2.logon_timeFR">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-11T03:48:49.354Z">
+<meta property="og:updated_time" content="2018-06-26T06:13:44.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="oracle 锁表查询和解锁">
-<meta name="twitter:description" content="1.查看里面的锁SELECT     b. OWNER,     b.object_name,     l.session_id,     l.locked_mode FROM     v$locked_object l,     dba_objects b WHERE     b.object_id = l.object_id;  select t2.username,t2.sid,t2.ser">
+<meta name="twitter:description" content="1.查看里面的锁12345678SELECT b. OWNER, b.object_name, l.session_id, l.locked_modeFROM v$locked_object l, dba_objects bWHERE b.object_id = l.object_id;SELECT t2.username, t2.sid, t2.serial #, t2.logon_timeFR">
 
 
 
@@ -393,7 +393,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  274
+                  311
                 </span>
               
 
@@ -409,7 +409,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -430,56 +430,14 @@
       
 
       
-        <h1 id="1-查看里面的锁"><a href="#1-查看里面的锁" class="headerlink" title="1.查看里面的锁"></a>1.查看里面的锁</h1><pre><code>SELECT
-    b. OWNER,
-    b.object_name,
-    l.session_id,
-    l.locked_mode
-FROM
-    v$locked_object l,
-    dba_objects b
-WHERE
-    b.object_id = l.object_id;
-
-select t2.username,t2.sid,t2.serial#,t2.logon_time
-from v$locked_object t1,v$session t2
-where t1.session_id=t2.sid order by t2.logon_time
-</code></pre><a id="more"></a>
-<h1 id="2-解锁"><a href="#2-解锁" class="headerlink" title="2.解锁"></a>2.解锁</h1><blockquote>
-<p>alter system kill session ‘sid,serial#’</p>
-</blockquote>
-<p>如：</p>
-<blockquote>
-<p>alter system kill session ‘111,222’</p>
-</blockquote>
-<h1 id="3-查询当前用户的所有活动的session"><a href="#3-查询当前用户的所有活动的session" class="headerlink" title="3.查询当前用户的所有活动的session"></a>3.查询当前用户的所有活动的session</h1><pre><code>select t.SID,t.SERIAL#,t.STATUS,t.STATE,t.SQL_ID
-  from v$session t
- where t.USERNAME = &apos;OCN_TDS_DB&apos;
-   and t.STATUS = &apos;ACTIVE&apos;
-   and t.MACHINE = &apos;localhost.localdomain&apos;;
-</code></pre><h1 id="4-分析session执行的SQL，尤其是sql-id相同的"><a href="#4-分析session执行的SQL，尤其是sql-id相同的" class="headerlink" title="4.分析session执行的SQL，尤其是sql_id相同的"></a>4.分析session执行的SQL，尤其是sql_id相同的</h1><pre><code>#7ykv5kcc4paz2表示当前重复较高的SQL，查询出来发现该SQL主要是用来刷新工单数的。
-select * from v$sql s where s.SQL_ID=&apos;7ykv5kcc4paz2&apos;
-</code></pre><h1 id="5-删除当前应用连接的所有活动session，释放资源"><a href="#5-删除当前应用连接的所有活动session，释放资源" class="headerlink" title="5.删除当前应用连接的所有活动session，释放资源"></a>5.删除当前应用连接的所有活动session，释放资源</h1><pre><code>#停止Mobile应用，清除所有获取工单数的SQL
-select &apos;alter system kill session &apos;&apos;&apos;||t.SID||&apos;,&apos;||t.SERIAL#||&apos;&apos;&apos;;&apos;
-  from v$session t
- where t.USERNAME = &apos;OCN_TDS_DB&apos;
-   and t.STATUS = &apos;ACTIVE&apos;
-   and t.SQL_ID=&apos;7ykv5kcc4paz2&apos;
-   and t.MACHINE = &apos;localhost.localdomain&apos;;
-</code></pre><h1 id="6-根据session-id查询执行的SQL"><a href="#6-根据session-id查询执行的SQL" class="headerlink" title="6.根据session_id查询执行的SQL"></a>6.根据session_id查询执行的SQL</h1><pre><code>select s.SAMPLE_TIME,
-sq.SQL_TEXT,
-sq.DISK_READS,
-sq.BUFFER_GETS,
-
-sq.CPU_TIME,
-sq.ROWS_PROCESSED,
---sq.SQL_FULLTEXT,
-sq.SQL_ID
-from v$sql sq, v$active_session_history s
-where s.SQL_ID = sq.SQL_ID
-and s.SESSION_ID = 190
-order by s.SAMPLE_TIME desc;
-</code></pre>
+        <h1 id="1-查看里面的锁"><a href="#1-查看里面的锁" class="headerlink" title="1.查看里面的锁"></a>1.查看里面的锁</h1><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT <span class="keyword">b. </span>OWNER, <span class="keyword">b.object_name, </span>l.session_id, l.locked_mode</span><br><span class="line">FROM v$locked_object l, dba_objects <span class="keyword">b</span></span><br><span class="line"><span class="keyword">WHERE </span><span class="keyword">b.object_id </span>= l.object_id<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">SELECT <span class="built_in">t2</span>.username, <span class="built_in">t2</span>.sid, <span class="built_in">t2</span>.serial <span class="comment">#, t2.logon_time</span></span><br><span class="line">FROM v$locked_object <span class="built_in">t1</span>, v$session <span class="built_in">t2</span></span><br><span class="line">WHERE <span class="built_in">t1</span>.session_id = <span class="built_in">t2</span>.sid</span><br><span class="line"><span class="keyword">ORDER </span><span class="keyword">BY </span><span class="built_in">t2</span>.logon_time</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="2-解锁"><a href="#2-解锁" class="headerlink" title="2.解锁"></a>2.解锁</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">system</span> <span class="keyword">kill</span> <span class="keyword">session</span> <span class="string">'sid,serial#'</span></span><br></pre></td></tr></table></figure>
+<p>如：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">system</span> <span class="keyword">kill</span> <span class="keyword">session</span> <span class="string">'111,222'</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="3-查询当前用户的所有活动的session"><a href="#3-查询当前用户的所有活动的session" class="headerlink" title="3.查询当前用户的所有活动的session"></a>3.查询当前用户的所有活动的session</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> t.SID,t.SERIAL#,t.STATUS,t.STATE,t.SQL_ID</span><br><span class="line"><span class="keyword">from</span> v$<span class="keyword">session</span> t</span><br><span class="line"><span class="keyword">where</span> t.USERNAME = <span class="string">'OCN_TDS_DB'</span></span><br><span class="line"><span class="keyword">and</span> t.STATUS = <span class="string">'ACTIVE'</span></span><br><span class="line"><span class="keyword">and</span> t.MACHINE = <span class="string">'localhost.localdomain'</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="4-分析session执行的SQL，尤其是sql-id相同的"><a href="#4-分析session执行的SQL，尤其是sql-id相同的" class="headerlink" title="4.分析session执行的SQL，尤其是sql_id相同的"></a>4.分析session执行的SQL，尤其是sql_id相同的</h1><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#7ykv5kcc4paz2表示当前重复较高的SQL，查询出来发现该SQL主要是用来刷新工单数的。</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> v$sql s <span class="keyword">where</span> s.SQL_ID=<span class="string">'7ykv5kcc4paz2'</span></span><br></pre></td></tr></table></figure>
+<h1 id="5-删除当前应用连接的所有活动session，释放资源"><a href="#5-删除当前应用连接的所有活动session，释放资源" class="headerlink" title="5.删除当前应用连接的所有活动session，释放资源"></a>5.删除当前应用连接的所有活动session，释放资源</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#停止Mobile应用，清除所有获取工单数的SQL</span></span><br><span class="line">select <span class="string">'alter system kill session '</span><span class="string">''</span><span class="params">||</span>t.SID<span class="params">||</span><span class="string">','</span><span class="params">||</span>t.SERIAL<span class="comment">#||''';'</span></span><br><span class="line">from v$session t</span><br><span class="line">where t.USERNAME = <span class="string">'OCN_TDS_DB'</span></span><br><span class="line"><span class="keyword">and</span> t.STATUS = <span class="string">'ACTIVE'</span></span><br><span class="line"><span class="keyword">and</span> t.SQL_ID=<span class="string">'7ykv5kcc4paz2'</span></span><br><span class="line"><span class="keyword">and</span> t.MACHINE = <span class="string">'localhost.localdomain'</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="6-根据session-id查询执行的SQL"><a href="#6-根据session-id查询执行的SQL" class="headerlink" title="6.根据session_id查询执行的SQL"></a>6.根据session_id查询执行的SQL</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> s.SAMPLE_TIME,</span><br><span class="line">sq.SQL_TEXT,</span><br><span class="line">sq.DISK_READS,</span><br><span class="line">sq.BUFFER_GETS,</span><br><span class="line"> </span><br><span class="line">sq.CPU_TIME,</span><br><span class="line">sq.ROWS_PROCESSED,</span><br><span class="line"><span class="comment">--sq.SQL_FULLTEXT,</span></span><br><span class="line">sq.SQL_ID</span><br><span class="line"><span class="keyword">from</span> v$<span class="keyword">sql</span> sq, v$active_session_history s</span><br><span class="line"><span class="keyword">where</span> s.SQL_ID = sq.SQL_ID</span><br><span class="line"><span class="keyword">and</span> s.SESSION_ID = <span class="number">190</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> s.SAMPLE_TIME <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
       
 
       <div>
@@ -503,7 +461,7 @@ order by s.SAMPLE_TIME desc;
   <!--  <p><span>本文标题:</span><a href="/2018/06/07/oracle-锁表查询和解锁/">oracle 锁表查询和解锁</a></p> -->
   <p><span>文章作者:</span><a href="/" title="访问 Smartfoot 的个人博客">Smartfoot</a></p>
   <!-- <p><span>发布时间:</span>2018年06月07日 - 15:06</p> -->
-  <!-- <p><span>最后更新:</span>2018年06月11日 - 11:06</p> -->
+  <!-- <p><span>最后更新:</span>2018年06月26日 - 14:06</p> -->
   <p><span>原始链接:</span><a href="/2018/06/07/oracle-锁表查询和解锁/" title="oracle 锁表查询和解锁">http://blog.bestsmartfoot.top/2018/06/07/oracle-锁表查询和解锁/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blog.bestsmartfoot.top/2018/06/07/oracle-锁表查询和解锁/"  aria-label="复制成功！"></i></span>
   </p>

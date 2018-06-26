@@ -114,7 +114,7 @@
 <meta property="og:image" content="https://i.imgur.com/fpIMr1D.png">
 <meta property="og:image" content="https://i.imgur.com/fpIMr1D.png">
 <meta property="og:image" content="https://i.imgur.com/fpIMr1D.png">
-<meta property="og:updated_time" content="2018-06-11T03:47:23.896Z">
+<meta property="og:updated_time" content="2018-06-26T06:23:20.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库字段加解密处理">
 <meta name="twitter:description" content="解决场景：  需要对应用数据存储时采取加密，比如手机号码、地址、证件号方案：">
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  326
+                  386
                 </span>
               
 
@@ -435,76 +435,17 @@
       
 
       
-        <p><strong>解决场景：</strong><br>  需要对应用数据存储时采取加密，比如手机号码、地址、证件号<br><br><strong>方案：</strong><br><br><img src="https://i.imgur.com/AzRjjpQ.png" alt=""><br><a id="more"></a><br><br><strong>其中：</strong><br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加解密函数存储在数据库中定义；<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加解密使用的key在应用中定义（定义后不可改变）；</p>
+        <p><strong>解决场景：</strong><br>  需要对应用数据存储时采取加密，比如手机号码、地址、证件号<br><br><strong>方案：</strong><br><br><img src="https://i.imgur.com/AzRjjpQ.png" alt=""><br><a id="more"></a><br><br><strong>其中：</strong><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加解密函数存储在数据库中定义；<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加解密使用的key在应用中定义（定义后不可改变）；</p>
 <hr>
-<p> <br><strong>示例：</strong><br><br>&nbsp;&nbsp;测试用表：</p>
-<pre><code>CREATE TABLE `sys_user` (
-`user_id` BIGINT (20) NOT NULL AUTO_INCREMENT,
-`user_name` VARCHAR (128) DEFAULT NULL,
-`user_mobile` VARCHAR (128) DEFAULT NULL,
-PRIMARY KEY (`user_id`)) ENGINE = INNODB DEFAULT CHARSET = utf8
-</code></pre><p>插入：</p>
-<pre><code>INSERT INTO `sys_user` (`user_name`, `user_mobile`) VALUES
-(
-    &apos;smartfoot&apos;,
-    DATA_ENCRYPT (&apos;13888888888&apos;, &apos;KEY_ABC&apos;)
-);
-</code></pre><p>存储结果:<br><img src="https://i.imgur.com/fpIMr1D.png" alt=""><br><br>查询：</p>
-<pre><code>SELECT
-`user_id`,
-`user_name`,
-DATA_DECRYPT (`user_mobile`, &apos;KEY_ABC&apos;) user_mobile FROM
-`sys_user`;
-</code></pre><p>查询结果:<br><img src="https://i.imgur.com/fpIMr1D.png" alt=""><br><br>模糊匹配：</p>
-<pre><code>SELECT
-`user_id`,
-`user_name`,
-HG_DECRYPT (`user_mobile`, &apos;KEY_ABC&apos;) user_mobile FROM `sys_user` WHERE HG_DECRYPT (`user_mobile`, &apos;KEY_ABC&apos;) LIKE &apos;138%&apos;;
-</code></pre><p> 查询结果:<br><img src="https://i.imgur.com/fpIMr1D.png" alt=""><br> <br><strong>注意事项</strong>：<br>  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加解密函数：加解密函数存储在数据库中定义，与应用无关；<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key ：加解密使用的key在应用中定义（定义后不可改变）；<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于加密后的长度可变，适当增加加密字段定义长度；</p>
+<p> <strong>示例：</strong><br>&nbsp;&nbsp;测试用表：<br> <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `sys_user` (</span><br><span class="line">`user_id` BIGINT (20) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">`user_name` VARCHAR (128)<span class="built_in"> DEFAULT </span><span class="literal">NULL</span>,</span><br><span class="line">`user_mobile` VARCHAR (128)<span class="built_in"> DEFAULT </span><span class="literal">NULL</span>,</span><br><span class="line">PRIMARY KEY (`user_id`)) ENGINE = INNODB<span class="built_in"> DEFAULT </span>CHARSET = utf8</span><br></pre></td></tr></table></figure></p>
+<p>插入：<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="symbol">`sys_user`</span> (<span class="symbol">`user_name`</span>, <span class="symbol">`user_mobile`</span>) <span class="keyword">VALUES</span></span><br><span class="line">(</span><br><span class="line">	<span class="string">'smartfoot'</span>,</span><br><span class="line">	DATA_ENCRYPT (<span class="string">'13888888888'</span>, <span class="string">'KEY_ABC'</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<p>存储结果:<br><img src="https://i.imgur.com/fpIMr1D.png" alt=""><br>查询：<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line"><span class="symbol">`user_id`</span>,</span><br><span class="line"><span class="symbol">`user_name`</span>,</span><br><span class="line">DATA_DECRYPT (<span class="symbol">`user_mobile`</span>, <span class="string">'KEY_ABC'</span>) user_mobile </span><br><span class="line"><span class="keyword">FROM</span> <span class="symbol">`sys_user`</span>;</span><br></pre></td></tr></table></figure></p>
+<p>查询结果:<br><img src="https://i.imgur.com/fpIMr1D.png" alt=""><br>模糊匹配：<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line"><span class="symbol">`user_id`</span>,</span><br><span class="line"><span class="symbol">`user_name`</span>,</span><br><span class="line">HG_DECRYPT (<span class="symbol">`user_mobile`</span>, <span class="string">'KEY_ABC'</span>) user_mobile </span><br><span class="line"><span class="keyword">FROM</span> <span class="symbol">`sys_user`</span> </span><br><span class="line"><span class="keyword">WHERE</span> HG_DECRYPT (<span class="symbol">`user_mobile`</span>, <span class="string">'KEY_ABC'</span>) <span class="keyword">LIKE</span> <span class="string">'138%'</span>;</span><br></pre></td></tr></table></figure></p>
+<p> 查询结果:<br><img src="https://i.imgur.com/fpIMr1D.png" alt=""><br> <strong>注意事项</strong>：<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加解密函数：加解密函数存储在数据库中定义，与应用无关；<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key ：加解密使用的key在应用中定义（定义后不可改变）；<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于加密后的长度可变，适当增加加密字段定义长度；</p>
 <hr>
-<p>Mysql：<br>加密函数:</p>
-<pre><code> DELIMITER $$
+<p>Mysql：<br>加密函数:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">DELIMITER $$</span><br><span class="line">    </span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">FUNCTION</span></span><br><span class="line"><span class="keyword">IF</span> <span class="keyword">EXISTS</span> <span class="string">`DATA_ENCRYPT`</span>$$</span><br><span class="line">    </span><br><span class="line"><span class="keyword">CREATE</span> DEFINER = <span class="keyword">CURRENT_USER</span> <span class="keyword">FUNCTION</span> <span class="string">`DATA_ENCRYPT`</span> (</span><br><span class="line">    p_text <span class="built_in">VARCHAR</span> (<span class="number">255</span>),</span><br><span class="line">    p_key <span class="built_in">VARCHAR</span> (<span class="number">255</span>)</span><br><span class="line">) <span class="keyword">RETURNS</span> <span class="built_in">VARCHAR</span> (<span class="number">255</span>) <span class="keyword">CHARSET</span> utf8</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">IF</span> (<span class="keyword">CHAR_LENGTH</span>(p_text) = <span class="number">0</span>) <span class="keyword">THEN</span></span><br><span class="line">    <span class="keyword">RETURN</span> <span class="string">''</span> ;</span><br><span class="line">ELSEIF CHAR_LENGTH(p_key) = 0 THEN</span><br><span class="line">    RETURN p_text ;</span><br><span class="line">ELSE</span><br><span class="line">    RETURN HEX(AES_ENCRYPT(p_text, p_key)) ;</span><br><span class="line"><span class="keyword">END</span></span><br><span class="line"><span class="keyword">IF</span> ; <span class="keyword">END</span>$$</span><br><span class="line">DELIMITER ;</span><br></pre></td></tr></table></figure></p>
+<p>解密函数：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">DELIMITER $$</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">FUNCTION</span></span><br><span class="line"><span class="keyword">IF</span> <span class="keyword">EXISTS</span> <span class="string">`DATA_DECRYPT`</span>$$</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> DEFINER = <span class="keyword">CURRENT_USER</span> <span class="keyword">FUNCTION</span> <span class="string">`DATA_DECRYPT`</span> (</span><br><span class="line">	p_text <span class="built_in">VARCHAR</span> (<span class="number">255</span>),</span><br><span class="line">	p_key <span class="built_in">VARCHAR</span> (<span class="number">255</span>)</span><br><span class="line">) <span class="keyword">RETURNS</span> <span class="built_in">VARCHAR</span> (<span class="number">255</span>) <span class="keyword">CHARSET</span> utf8</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">IF</span> (<span class="keyword">CHAR_LENGTH</span>(p_text) = <span class="number">0</span>) <span class="keyword">THEN</span></span><br><span class="line">	<span class="keyword">RETURN</span> <span class="string">''</span> ;</span><br><span class="line">ELSEIF CHAR_LENGTH(p_key) = 0 THEN</span><br><span class="line">	RETURN p_text ;</span><br><span class="line">ELSE</span><br><span class="line">	RETURN AES_DECRYPT(UNHEX(p_text), p_key) ;</span><br><span class="line"><span class="keyword">END</span></span><br><span class="line"><span class="keyword">IF</span> ; <span class="keyword">END</span>$$</span><br><span class="line">DELIMITER ;</span><br></pre></td></tr></table></figure></p>
 
-
-DROP FUNCTION
-IF EXISTS `DATA_ENCRYPT`$$
-
-CREATE DEFINER = CURRENT_USER FUNCTION `DATA_ENCRYPT` (
-    p_text VARCHAR (255),
-    p_key VARCHAR (255)
-) RETURNS VARCHAR (255) CHARSET utf8
-BEGIN
-
-IF (CHAR_LENGTH(p_text) = 0) THEN
-    RETURN &apos;&apos; ;
-ELSEIF CHAR_LENGTH(p_key) = 0 THEN
-    RETURN p_text ;
-ELSE
-    RETURN HEX(AES_ENCRYPT(p_text, p_key)) ;
-END
-IF ; END$$
-DELIMITER ;
-</code></pre><p>解密函数：</p>
-<pre><code>DELIMITER $$
-DROP FUNCTION
-IF EXISTS `DATA_DECRYPT`$$
-
-CREATE DEFINER = CURRENT_USER FUNCTION `DATA_DECRYPT` (
-    p_text VARCHAR (255),
-    p_key VARCHAR (255)
-) RETURNS VARCHAR (255) CHARSET utf8
-BEGIN
-
-IF (CHAR_LENGTH(p_text) = 0) THEN
-    RETURN &apos;&apos; ;
-ELSEIF CHAR_LENGTH(p_key) = 0 THEN
-    RETURN p_text ;
-ELSE
-    RETURN AES_DECRYPT(UNHEX(p_text), p_key) ;
-END
-IF ; END$$
-DELIMITER ;
-</code></pre>
       
 
       <div>
@@ -528,7 +469,7 @@ DELIMITER ;
   <!--  <p><span>本文标题:</span><a href="/2018/06/05/数据库字段加解密处理/">数据库字段加解密处理</a></p> -->
   <p><span>文章作者:</span><a href="/" title="访问 Smartfoot 的个人博客">Smartfoot</a></p>
   <!-- <p><span>发布时间:</span>2018年06月05日 - 14:06</p> -->
-  <!-- <p><span>最后更新:</span>2018年06月11日 - 11:06</p> -->
+  <!-- <p><span>最后更新:</span>2018年06月26日 - 14:06</p> -->
   <p><span>原始链接:</span><a href="/2018/06/05/数据库字段加解密处理/" title="数据库字段加解密处理">http://blog.bestsmartfoot.top/2018/06/05/数据库字段加解密处理/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blog.bestsmartfoot.top/2018/06/05/数据库字段加解密处理/"  aria-label="复制成功！"></i></span>
   </p>

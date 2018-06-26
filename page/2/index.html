@@ -765,7 +765,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  274
+                  311
                 </span>
               
 
@@ -781,7 +781,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -803,21 +803,7 @@
 
       
         
-          <h1 id="1-查看里面的锁"><a href="#1-查看里面的锁" class="headerlink" title="1.查看里面的锁"></a>1.查看里面的锁</h1><pre><code>SELECT
-    b. OWNER,
-    b.object_name,
-    l.session_id,
-    l.locked_mode
-FROM
-    v$locked_object l,
-    dba_objects b
-WHERE
-    b.object_id = l.object_id;
-
-select t2.username,t2.sid,t2.serial#,t2.logon_time
-from v$locked_object t1,v$session t2
-where t1.session_id=t2.sid order by t2.logon_time
-</code></pre>
+          <h1 id="1-查看里面的锁"><a href="#1-查看里面的锁" class="headerlink" title="1.查看里面的锁"></a>1.查看里面的锁</h1><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT <span class="keyword">b. </span>OWNER, <span class="keyword">b.object_name, </span>l.session_id, l.locked_mode</span><br><span class="line">FROM v$locked_object l, dba_objects <span class="keyword">b</span></span><br><span class="line"><span class="keyword">WHERE </span><span class="keyword">b.object_id </span>= l.object_id<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">SELECT <span class="built_in">t2</span>.username, <span class="built_in">t2</span>.sid, <span class="built_in">t2</span>.serial <span class="comment">#, t2.logon_time</span></span><br><span class="line">FROM v$locked_object <span class="built_in">t1</span>, v$session <span class="built_in">t2</span></span><br><span class="line">WHERE <span class="built_in">t1</span>.session_id = <span class="built_in">t2</span>.sid</span><br><span class="line"><span class="keyword">ORDER </span><span class="keyword">BY </span><span class="built_in">t2</span>.logon_time</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/06/07/oracle-锁表查询和解锁/#more" rel="contents">
