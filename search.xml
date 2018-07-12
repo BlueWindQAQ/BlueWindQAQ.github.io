@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[maven项目引入外部jar]]></title>
+    <url>%2F2018%2F07%2F12%2Farticle-5%2F</url>
+    <content type="text"><![CDATA[当我们开发一个功能时发现自己的maven仓库中缺少需要的jar怎么办？ 首先将需要的jar下载下来 然后将jar导入到项目中：webapp/WEB-INF/lib目录下 最后在pom.xml文件中加入依赖就可以编译和打包运行了 1234567&lt;dependency&gt; &lt;groupId&gt;fakepath&lt;/groupId&gt; &lt;artifactId&gt;jxl-report&lt;/artifactId&gt; &lt;version&gt;1.0&lt;/version&gt; &lt;scope&gt;system&lt;/scope&gt; &lt;systemPath&gt;$&#123;basedir&#125;/src/main/webapp/WEB-INF/lib/jxl-report-1.0.jar&lt;/systemPath&gt;&lt;/dependency&gt; systemPath：导入外部jar的路径${basedir}：项目根目录最终路径为：${basedir}/src/main/webapp/WEB-INF/lib/xxx.jar]]></content>
+      <categories>
+        <category>maven</category>
+      </categories>
+      <tags>
+        <tag>maven</tag>
+        <tag>jar</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[java实现excel模板导出数据]]></title>
     <url>%2F2018%2F07%2F06%2Farticle-4%2F</url>
     <content type="text"><![CDATA[web项目导出excel有很多种方法，个人觉得使用excel模板导出比较好用，可以满足甲方对excel格式的多种需求，而且实现起来方便。 准备需要的jar：下载地址freemarker-2.3.19.jarfreemarker-util-0.0.1.jarjxl-2.6.10.jarjxl-report-1.0.jarmaven项目pom.xml配置：12345678910111213141516171819202122&lt;!-- excel模板依赖start --&gt;&lt;dependency&gt; &lt;groupId&gt;org.freemarker&lt;/groupId&gt; &lt;artifactId&gt;freemarker&lt;/artifactId&gt; &lt;version&gt;2.3.19&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;net.sourceforge.jexcelapi&lt;/groupId&gt; &lt;artifactId&gt;jxl&lt;/artifactId&gt; &lt;version&gt;2.6.10&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;fakepath&lt;/groupId&gt; &lt;artifactId&gt;freemarker-util&lt;/artifactId&gt; &lt;version&gt;0.0.1&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;fakepath&lt;/groupId&gt; &lt;artifactId&gt;jxl-report&lt;/artifactId&gt; &lt;version&gt;1.0&lt;/version&gt;&lt;/dependency&gt;&lt;!-- excel模板依赖 end--&gt; java代码实现：1234567891011121314151617181920212223242526272829303132333435@RequestMapping("/exportExcel") @ResponseBody public Map&lt;String,Object&gt; exportExcel(HttpServletRequest request,@RequestBody Map&lt;String, Object&gt; map) throws Exception &#123; logger.info("------------开始执行下载任务-----------"); Map&lt;String,Object&gt; result = new HashMap&lt;String,Object&gt;(); result.put("result",true); result.put("msg","执行成功"); try &#123; String downloadPath="/export";//导出文件夹 //查询导出数据 Map&lt;String,Object&gt; resultMap = reportService.queryExportData(map); //目录生成 ExcelUtil.mkdir(downloadPath); String filename = UUID.randomUUID().toString().replace("-", "").toUpperCase()+".xls"; File f = new File(downloadPath+"/" + File.separatorChar + filename); // 模板生成Excel ReportEnginer enginer = new ReportEnginer(); //模板存储路径 String modelPath = request.getSession().getServletContext().getRealPath("/")+ "/template/model.xls"; InputStream inputStream = new FileInputStream(new File(modelPath)); OutputStream outputStream = new FileOutputStream(f); enginer.excute(inputStream, resultMap, outputStream); inputStream.close(); outputStream.close(); downloadDetail.setResult(filename); &#125; catch (Exception e) &#123; e.printStackTrace(); result.put("result",false); result.put("msg","执行失败"); logger.info("------------下载任务执行失败-----------"); &#125; logger.info("------------下载任务执行完成-----------"); return result; &#125; 代码中resultMap如下：{datalist=[{hours=9, name=张三, cost=10}, {hours=32, name=李四, cost=6}]}excle模板：使用etl表达式结果：]]></content>

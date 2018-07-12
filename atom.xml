@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-07-06T09:23:46.953Z</updated>
+  <updated>2018-07-12T10:55:22.549Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>maven项目引入外部jar</title>
+    <link href="http://blog.bestsmartfoot.top/2018/07/12/article-5/"/>
+    <id>http://blog.bestsmartfoot.top/2018/07/12/article-5/</id>
+    <published>2018-07-12T10:52:05.000Z</published>
+    <updated>2018-07-12T10:55:22.549Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当我们开发一个功能时发现自己的&lt;code&gt;maven&lt;/code&gt;仓库中缺少需要的jar怎么办？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先将需要的jar下载下来&lt;/li&gt;
+&lt;li&gt;然后将jar导入到项目中：webapp/WEB-INF/lib目录下&lt;/li&gt;
+&lt;li&gt;最后在&lt;code&gt;pom.xml&lt;/code&gt;文件中加入依赖就可以编译和打包运行了
+    
+    </summary>
+    
+      <category term="maven" scheme="http://blog.bestsmartfoot.top/categories/maven/"/>
+    
+    
+      <category term="maven" scheme="http://blog.bestsmartfoot.top/tags/maven/"/>
+    
+      <category term="jar" scheme="http://blog.bestsmartfoot.top/tags/jar/"/>
+    
+  </entry>
   
   <entry>
     <title>java实现excel模板导出数据</title>
