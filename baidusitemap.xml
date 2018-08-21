@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://blog.bestsmartfoot.top/2018/08/15/a2/</loc>
+    <lastmod>2018-08-15T12:22:33.587Z</lastmod>
+    <data>
+        <display>
+        <title>JVM初探- 内存分配、GC原理与垃圾收集器</title>
+        <pubTime>2018-08-15T02:43:28.000Z</pubTime>
+        
+        <tag>JVM</tag>
+         
+        <tag>GC</tag>
+         
+         
+           
+             
+              <breadCrumb title="JVM" url="http://blog.bestsmartfoot.top/categories/JVM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.bestsmartfoot.top/2018/08/13/a1/</loc>
+    <lastmod>2018-08-13T08:02:56.733Z</lastmod>
+    <data>
+        <display>
+        <title>Linux系统平均负载指标解读</title>
+        <pubTime>2018-08-13T06:39:31.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.bestsmartfoot.top/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.bestsmartfoot.top/2018/07/12/article-5/</loc>
     <lastmod>2018-07-12T10:55:22.549Z</lastmod>
     <data>

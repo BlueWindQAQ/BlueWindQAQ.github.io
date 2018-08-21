@@ -2,39 +2,29 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
-<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
-
-<style>
-    .pace .pace-progress {
-        background: #1E92FB; /*��������ɫ*/
-        height: 3px;
-    }
-    .pace .pace-progress-inner {
-         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*��Ӱ��ɫ*/
-    }
-    .pace .pace-activity {
-        border-top-color: #1E92FB;    /*�ϱ߿���ɫ*/
-        border-left-color: #1E92FB;    /*��߿���ɫ*/
-    }
-</style>
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
 
 
 
@@ -60,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -72,44 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/xjy-apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/xjy-apple-touch-icon-next.png?v=6.4.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/xjy-32x32.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/xjy-32x32.png?v=6.4.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/xjy-16x16.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/xjy-16x16.png?v=6.4.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="时光的小脚丫丶" type="application/atom+xml" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
 
 
 
 
 
 
-<meta name="description" content="不负好时光">
-<meta property="og:type" content="website">
-<meta property="og:title" content="时光的小脚丫丶">
-<meta property="og:url" content="http://blog.bestsmartfoot.top/index.html">
-<meta property="og:site_name" content="时光的小脚丫丶">
-<meta property="og:description" content="不负好时光">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="时光的小脚丫丶">
-<meta name="twitter:description" content="不负好时光">
 
 
 
@@ -118,15 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
-    fancybox: true,
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -138,14 +103,40 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="不负好时光">
+<meta property="og:type" content="website">
+<meta property="og:title" content="时光的小脚丫丶">
+<meta property="og:url" content="http://blog.bestsmartfoot.top/index.html">
+<meta property="og:site_name" content="时光的小脚丫丶">
+<meta property="og:description" content="不负好时光">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="时光的小脚丫丶">
+<meta name="twitter:description" content="不负好时光">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="时光的小脚丫丶" type="application/atom+xml" />
+
+
+
 
   <link rel="canonical" href="http://blog.bestsmartfoot.top/"/>
 
 
 
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>  - 时光的小脚丫丶 - 不负好时光 </title>
+  <title>时光的小脚丫丶</title>
   
 
 
@@ -155,9 +146,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -174,19 +193,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">时光的小脚丫丶</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -194,66 +211,66 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
 
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -284,12 +301,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -302,16 +330,18 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/07/12/article-5/">
+    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/08/15/a2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Smartfoot">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="不负好时光">
       <meta itemprop="image" content="/images/smartfoot.jpg">
     </span>
 
@@ -326,11 +356,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/12/article-5/" itemprop="url">maven项目引入外部jar</a></h1>
+                <a class="post-title-link" href="/2018/08/15/a2/" itemprop="url">
+                  JVM初探- 内存分配、GC原理与垃圾收集器
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -338,13 +378,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-12T18:52:05+08:00">
-                2018-07-12
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-15 10:43:28 / 修改时间：20:22:33" itemprop="dateCreated datePublished" datetime="2018-08-15T10:43:28+08:00">2018-08-15</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -360,11 +405,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/maven/" itemprop="url" rel="index">
-                    <span itemprop="name">maven</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
 
                 
                 
@@ -382,36 +423,343 @@
           
 
           
-            <div class="post-wordcount">
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>JVM内存的分配与回收大致可分为如下4个步骤: 何时分配 -&gt; 怎样分配 -&gt; 何时回收 -&gt; 怎样回收. </p>
+</blockquote>
+<p>除了在概念上可简单认为new时分配外, 我们着重介绍后面的3个步骤:</p>
+<h1 id="I-怎样分配-JVM内存分配策略"><a href="#I-怎样分配-JVM内存分配策略" class="headerlink" title="I. 怎样分配- JVM内存分配策略"></a>I. 怎样分配- JVM内存分配策略</h1><p>对象内存主要分配在新生代<code>Eden</code>区, 如果启用了本地线程分配缓冲, 则优先在TLAB上分配, 少数情况能会直接分配在<code>老年代</code>, 或被拆分成标量类型在栈上分配(JIT优化). 分配的规则并不是百分百固定, 细节主要取决于垃圾收集器组合, 以及VM内存相关的参数.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/15/a2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    <div>
+	  
+      </div>
+      <div>
+	      
+      </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/08/13/a1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Smartfoot">
+      <meta itemprop="description" content="不负好时光">
+      <meta itemprop="image" content="/images/smartfoot.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="时光的小脚丫丶">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/13/a1/" itemprop="url">
+                  Linux系统平均负载指标解读
+                </a>
               
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  143
-                </span>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
               
 
               
-                <span class="post-meta-divider">|</span>
+                
+              
+
+              <time title="创建时间：2018-08-13 14:39:31 / 修改时间：16:02:56" itemprop="dateCreated datePublished" datetime="2018-08-13T14:39:31+08:00">2018-08-13</time>
+            
+
+            
               
 
               
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
               
-            </div>
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="一-使用top命令-看到右上角有个平均负载指标"><a href="#一-使用top命令-看到右上角有个平均负载指标" class="headerlink" title="一.使用top命令,看到右上角有个平均负载指标"></a>一.使用<code>top</code>命令,看到右上角有个平均负载指标</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">top - <span class="number">11</span>:<span class="number">47</span>:<span class="number">03</span> <span class="keyword">up</span> <span class="number">356</span> days, <span class="number">20</span>:<span class="number">33</span>,  <span class="number">8</span> users,  load average: <span class="number">10.08</span>, <span class="number">11.02</span>, <span class="number">12.23</span></span><br><span class="line">Task<span class="variable">s:</span> <span class="number">159</span> total,   <span class="number">3</span> running, <span class="number">156</span> sleeping,   <span class="number">0</span> stopped,   <span class="number">0</span> zombie</span><br><span class="line">%Cpu0  : <span class="number">55.8</span> us, <span class="number">11.5</span> <span class="keyword">sy</span>,  <span class="number">0.0</span> ni, <span class="number">17.3</span> id,  <span class="number">0.0</span> <span class="keyword">wa</span>,  <span class="number">0.0</span> <span class="keyword">hi</span>, <span class="number">15.4</span> si,  <span class="number">0.0</span> <span class="keyword">st</span></span><br><span class="line">%Cpu1  : <span class="number">36.7</span> us, <span class="number">16.3</span> <span class="keyword">sy</span>,  <span class="number">0.0</span> ni, <span class="number">46.9</span> id,  <span class="number">0.0</span> <span class="keyword">wa</span>,  <span class="number">0.0</span> <span class="keyword">hi</span>,  <span class="number">0.0</span> si,  <span class="number">0.0</span> <span class="keyword">st</span></span><br><span class="line">%Cpu2  : <span class="number">37.3</span> us, <span class="number">15.7</span> <span class="keyword">sy</span>,  <span class="number">0.0</span> ni, <span class="number">47.1</span> id,  <span class="number">0.0</span> <span class="keyword">wa</span>,  <span class="number">0.0</span> <span class="keyword">hi</span>,  <span class="number">0.0</span> si,  <span class="number">0.0</span> <span class="keyword">st</span></span><br><span class="line">%Cpu3  : <span class="number">30.8</span> us, <span class="number">11.5</span> <span class="keyword">sy</span>,  <span class="number">0.0</span> ni, <span class="number">57.7</span> id,  <span class="number">0.0</span> <span class="keyword">wa</span>,  <span class="number">0.0</span> <span class="keyword">hi</span>,  <span class="number">0.0</span> si,  <span class="number">0.0</span> <span class="keyword">st</span></span><br><span class="line">KiB Mem : <span class="number">16268500</span> total,   <span class="number">169076</span> free,  <span class="number">8331188</span> used,  <span class="number">7768236</span> buff/cache</span><br><span class="line">KiB Swap:        <span class="number">0</span> total,        <span class="number">0</span> free,        <span class="number">0</span> used.  <span class="number">7399704</span> avail Mem</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/13/a1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    <div>
+	  
+      </div>
+      <div>
+	      
+      </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/07/12/article-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Smartfoot">
+      <meta itemprop="description" content="不负好时光">
+      <meta itemprop="image" content="/images/smartfoot.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="时光的小脚丫丶">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/12/article-5/" itemprop="url">
+                  maven项目引入外部jar
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-12 18:52:05 / 修改时间：18:55:22" itemprop="dateCreated datePublished" datetime="2018-07-12T18:52:05+08:00">2018-07-12</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/maven/" itemprop="url" rel="index"><span itemprop="name">maven</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
           
 
           
@@ -438,399 +786,25 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/12/article-5/#more" rel="contents">
-              查看更多 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
         
       
+    </div>
 
-      <div>
+    
+    <div>
 	  
       </div>
       <div>
 	      
       </div>
-    </div>
     
     
     
 
-	
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/07/06/article-4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Smartfoot">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/smartfoot.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="时光的小脚丫丶">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/06/article-4/" itemprop="url">java实现excel模板导出数据</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-06T17:14:58+08:00">
-                2018-07-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  424
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>web项目导出excel有很多种方法，个人觉得使用<code>excel模板</code>导出比较好用，可以满足甲方对excel格式的多种需求，而且实现起来方便。</p>
-<p>准备需要的jar：<a href="https://download.csdn.net/download/lvchengfengdehao/10524351" target="_blank" rel="noopener">下载地址</a><br>freemarker-2.3.19.jar<br>freemarker-util-0.0.1.jar<br>jxl-2.6.10.jar<br>jxl-report-1.0.jar<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/06/article-4/#more" rel="contents">
-              查看更多 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-
-      <div>
-	  
-      </div>
-      <div>
-	      
-      </div>
-    </div>
-    
-    
-    
-
-	
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/06/23/article-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Smartfoot">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/smartfoot.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="时光的小脚丫丶">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/23/article-3/" itemprop="url">博客文字增加背景色块</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-23T15:35:00+08:00">
-                2018-06-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  328
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ul>
-<li>文字<code>配置</code>效果如下：</li>
-</ul>
-<p><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/23/article-3/#more" rel="contents">
-              查看更多 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-
-      <div>
-	  
-      </div>
-      <div>
-	      
-      </div>
-    </div>
-    
-    
-    
-
-	
     
 
     
@@ -861,15 +835,12 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -885,8 +856,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
-      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 
@@ -906,42 +875,94 @@
               <p class="site-description motion-element" itemprop="description">不负好时光</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -954,56 +975,39 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/BlueWindQAQ" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://blog.csdn.net/LvChengfengdehao" target="_blank" title="CSDN">
-                      
-                        <i class="fa fa-fw fa-contao"></i>CSDN</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://gitee.com/chengfenggit20161122" target="_blank" title="码云">
-                      
-                        <i class="fa fa-fw fa-gg"></i>码云</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:system@bestsmartfoot.top" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/BlueWindQAQ" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/LvChengfengdehao" target="_blank" title="CSDN"><i class="fa fa-fw fa-contao"></i>CSDN</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://gitee.com/chengfenggit20161122" target="_blank" title="码云"><i class="fa fa-fw fa-gg"></i>码云</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:system@bestsmartfoot.top" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
             </div>
           
 
-	  
-		<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
-		<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
-		<div class="widget-wrap">
-		    <h3 class="widget-title">标签云</h3>
-		    <div id="myCanvasContainer" class="widget tagcloud">
-			<canvas width="250" height="250" id="resCanvas" style="width=100%;">
-			    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTPS/">HTTPS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSL证书/">SSL证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/">excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jar/">jar</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/今文古译/">今文古译</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/加密/">加密</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板/">模板</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/阿里云/">阿里云</a><span class="tag-list-count">1</span></li></ul>
-			</canvas>
-		    </div>
-		</div>
-		
-
           
           
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                友情链接
+                Links
               </div>
               <ul class="links-of-blogroll-list">
                 
@@ -1019,6 +1023,9 @@
             </div>
           
 
+          
+            
+          
           
 
         </div>
@@ -1040,15 +1047,20 @@
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Smartfoot 版权所有</span>
+  <span class="author" itemprop="copyrightHolder">Smartfoot</span>
 
   
 
   
+
+
+
+
   <span class="post-meta-divider">|</span>
+
 
 
 <div class="powered-by">
@@ -1056,16 +1068,13 @@
     本站总访问量<span id="busuanzi_value_site_pv"></span>次
 </span>
 </div>
+</div>
 <div>
 <i></i><span>皖ICP备18012173号</span>
 </div>
 
-
-
-
-
-
         
+
 
 
 
@@ -1085,7 +1094,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -1104,7 +1116,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1124,16 +1140,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1142,18 +1148,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
 
 
 
@@ -1161,9 +1162,9 @@
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
 
 
 
@@ -1172,21 +1173,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
 
 
 
@@ -1194,11 +1181,7 @@
 
 
 
-
-
   
-
-
 
 
 
@@ -1260,6 +1243,8 @@
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -1293,6 +1278,7 @@
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -1539,6 +1525,12 @@
   
 
   
+
+  
+  
+
+  
+
   
 
   
@@ -1549,5 +1541,3 @@
 
 </body>
 </html>
-<!-- ҳ����С���� -->
-<script type="text/javascript" src="/js/src/love.js"></script>
