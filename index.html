@@ -64,7 +64,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/xjy-apple-touch-icon-next.png?v=6.4.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/xjy-32x32.png?v=6.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
 
 
   <link rel="icon" type="image/png" sizes="16x16" href="/images/xjy-16x16.png?v=6.4.0">
@@ -257,6 +257,14 @@
     <a href="/about/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-messageboard">
+    <a href="/message" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-comment"></i> <br />messageBoard</a>
+  </li>
 
       
       
@@ -337,10 +345,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/08/15/a2/">
+    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/08/20/a8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Smartfoot">
+      <meta itemprop="name" content="smartfoot">
       <meta itemprop="description" content="不负好时光">
       <meta itemprop="image" content="/images/smartfoot.jpg">
     </span>
@@ -356,8 +364,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/15/a2/" itemprop="url">
-                  JVM初探- 内存分配、GC原理与垃圾收集器
+                <a class="post-title-link" href="/2018/08/20/a8/" itemprop="url">
+                  JVM大对象直接进入老年代
                 </a>
               
             
@@ -383,7 +391,7 @@
                 
               
 
-              <time title="创建时间：2018-08-15 10:43:28 / 修改时间：20:22:33" itemprop="dateCreated datePublished" datetime="2018-08-15T10:43:28+08:00">2018-08-15</time>
+              <time title="创建时间：2018-08-20 15:02:16 / 修改时间：15:37:51" itemprop="dateCreated datePublished" datetime="2018-08-20T15:02:16+08:00">2018-08-20</time>
             
 
             
@@ -415,6 +423,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/20/a8/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/20/a8/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -422,6 +440,38 @@
 
           
 
+          
+
+	  
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  327字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1分钟
+                </span>
+              
+            </div>
           
 
           
@@ -440,14 +490,11 @@
 
       
         
-          <blockquote>
-<p>JVM内存的分配与回收大致可分为如下4个步骤: 何时分配 -&gt; 怎样分配 -&gt; 何时回收 -&gt; 怎样回收. </p>
-</blockquote>
-<p>除了在概念上可简单认为new时分配外, 我们着重介绍后面的3个步骤:</p>
-<h1 id="I-怎样分配-JVM内存分配策略"><a href="#I-怎样分配-JVM内存分配策略" class="headerlink" title="I. 怎样分配- JVM内存分配策略"></a>I. 怎样分配- JVM内存分配策略</h1><p>对象内存主要分配在新生代<code>Eden</code>区, 如果启用了本地线程分配缓冲, 则优先在TLAB上分配, 少数情况能会直接分配在<code>老年代</code>, 或被拆分成标量类型在栈上分配(JIT优化). 分配的规则并不是百分百固定, 细节主要取决于垃圾收集器组合, 以及VM内存相关的参数.<br>
+          <p>原文：<a href="https://book.2cto.com/201306/25496.html" target="_blank" rel="noopener">https://book.2cto.com/201306/25496.html</a></p>
+<p>虚拟机提供了一个<code>-XX:PretenureSizeThreshold</code>参数，令大于这个设置值的对象直接在老年代分配。这样做的目的是避免在Eden区及两个Survivor区之间发生大量的内存复制（复习一下：新生代采用复制算法收集内存）。
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/08/15/a2/#more" rel="contents">
+            <a class="btn" href="/2018/08/20/a8/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -508,10 +555,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/08/13/a1/">
+    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/08/20/a7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Smartfoot">
+      <meta itemprop="name" content="smartfoot">
       <meta itemprop="description" content="不负好时光">
       <meta itemprop="image" content="/images/smartfoot.jpg">
     </span>
@@ -527,8 +574,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/13/a1/" itemprop="url">
-                  Linux系统平均负载指标解读
+                <a class="post-title-link" href="/2018/08/20/a7/" itemprop="url">
+                  JVM出现频繁GC (Allocation Failure)及young gc时间过长分析
                 </a>
               
             
@@ -554,7 +601,7 @@
                 
               
 
-              <time title="创建时间：2018-08-13 14:39:31 / 修改时间：16:02:56" itemprop="dateCreated datePublished" datetime="2018-08-13T14:39:31+08:00">2018-08-13</time>
+              <time title="创建时间：2018-08-20 14:59:55 / 修改时间：15:37:59" itemprop="dateCreated datePublished" datetime="2018-08-20T14:59:55+08:00">2018-08-20</time>
             
 
             
@@ -576,7 +623,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
 
                 
                 
@@ -586,6 +633,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/20/a7/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/20/a7/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -593,6 +650,38 @@
 
           
 
+          
+
+	  
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  178字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1分钟
+                </span>
+              
+            </div>
           
 
           
@@ -611,10 +700,10 @@
 
       
         
-          <h2 id="一-使用top命令-看到右上角有个平均负载指标"><a href="#一-使用top命令-看到右上角有个平均负载指标" class="headerlink" title="一.使用top命令,看到右上角有个平均负载指标"></a>一.使用<code>top</code>命令,看到右上角有个平均负载指标</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">top - <span class="number">11</span>:<span class="number">47</span>:<span class="number">03</span> <span class="keyword">up</span> <span class="number">356</span> days, <span class="number">20</span>:<span class="number">33</span>,  <span class="number">8</span> users,  load average: <span class="number">10.08</span>, <span class="number">11.02</span>, <span class="number">12.23</span></span><br><span class="line">Task<span class="variable">s:</span> <span class="number">159</span> total,   <span class="number">3</span> running, <span class="number">156</span> sleeping,   <span class="number">0</span> stopped,   <span class="number">0</span> zombie</span><br><span class="line">%Cpu0  : <span class="number">55.8</span> us, <span class="number">11.5</span> <span class="keyword">sy</span>,  <span class="number">0.0</span> ni, <span class="number">17.3</span> id,  <span class="number">0.0</span> <span class="keyword">wa</span>,  <span class="number">0.0</span> <span class="keyword">hi</span>, <span class="number">15.4</span> si,  <span class="number">0.0</span> <span class="keyword">st</span></span><br><span class="line">%Cpu1  : <span class="number">36.7</span> us, <span class="number">16.3</span> <span class="keyword">sy</span>,  <span class="number">0.0</span> ni, <span class="number">46.9</span> id,  <span class="number">0.0</span> <span class="keyword">wa</span>,  <span class="number">0.0</span> <span class="keyword">hi</span>,  <span class="number">0.0</span> si,  <span class="number">0.0</span> <span class="keyword">st</span></span><br><span class="line">%Cpu2  : <span class="number">37.3</span> us, <span class="number">15.7</span> <span class="keyword">sy</span>,  <span class="number">0.0</span> ni, <span class="number">47.1</span> id,  <span class="number">0.0</span> <span class="keyword">wa</span>,  <span class="number">0.0</span> <span class="keyword">hi</span>,  <span class="number">0.0</span> si,  <span class="number">0.0</span> <span class="keyword">st</span></span><br><span class="line">%Cpu3  : <span class="number">30.8</span> us, <span class="number">11.5</span> <span class="keyword">sy</span>,  <span class="number">0.0</span> ni, <span class="number">57.7</span> id,  <span class="number">0.0</span> <span class="keyword">wa</span>,  <span class="number">0.0</span> <span class="keyword">hi</span>,  <span class="number">0.0</span> si,  <span class="number">0.0</span> <span class="keyword">st</span></span><br><span class="line">KiB Mem : <span class="number">16268500</span> total,   <span class="number">169076</span> free,  <span class="number">8331188</span> used,  <span class="number">7768236</span> buff/cache</span><br><span class="line">KiB Swap:        <span class="number">0</span> total,        <span class="number">0</span> free,        <span class="number">0</span> used.  <span class="number">7399704</span> avail Mem</span><br></pre></td></tr></table></figure>
+          <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>本文主要分析一个频繁GC (Allocation Failure)及young gc时间过长的case。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/08/13/a1/#more" rel="contents">
+            <a class="btn" href="/2018/08/20/a7/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -675,10 +764,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/07/12/article-5/">
+    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/08/20/a6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Smartfoot">
+      <meta itemprop="name" content="smartfoot">
       <meta itemprop="description" content="不负好时光">
       <meta itemprop="image" content="/images/smartfoot.jpg">
     </span>
@@ -694,8 +783,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/12/article-5/" itemprop="url">
-                  maven项目引入外部jar
+                <a class="post-title-link" href="/2018/08/20/a6/" itemprop="url">
+                  JVM -XX:NewRatio、-XX:SurvivorRatio参数含义
                 </a>
               
             
@@ -721,7 +810,7 @@
                 
               
 
-              <time title="创建时间：2018-07-12 18:52:05 / 修改时间：18:55:22" itemprop="dateCreated datePublished" datetime="2018-07-12T18:52:05+08:00">2018-07-12</time>
+              <time title="创建时间：2018-08-20 14:58:36 / 修改时间：15:38:54" itemprop="dateCreated datePublished" datetime="2018-08-20T14:58:36+08:00">2018-08-20</time>
             
 
             
@@ -743,7 +832,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/maven/" itemprop="url" rel="index"><span itemprop="name">maven</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
 
                 
                 
@@ -753,6 +842,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/20/a6/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/20/a6/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -760,6 +859,38 @@
 
           
 
+          
+
+	  
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  0字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1分钟
+                </span>
+              
+            </div>
           
 
           
@@ -778,18 +909,10 @@
 
       
         
-          <p>当我们开发一个功能时发现自己的<code>maven</code>仓库中缺少需要的jar怎么办？</p>
-<ul>
-<li>首先将需要的jar下载下来</li>
-<li>然后将jar导入到项目中：webapp/WEB-INF/lib目录下</li>
-<li>最后在<code>pom.xml</code>文件中加入依赖就可以编译和打包运行了
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/12/article-5/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p><img src="https://i.imgur.com/jqJYTv8.png" alt=""></p>
+
+          
         
       
     </div>
@@ -835,7 +958,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -869,9 +992,9 @@
             
               <img class="site-author-image" itemprop="image"
                 src="/images/smartfoot.jpg"
-                alt="Smartfoot" />
+                alt="smartfoot" />
             
-              <p class="site-author-name" itemprop="name">Smartfoot</p>
+              <p class="site-author-name" itemprop="name">smartfoot</p>
               <p class="site-description motion-element" itemprop="description">不负好时光</p>
           </div>
 
@@ -882,7 +1005,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -911,7 +1034,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -956,7 +1083,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -998,6 +1133,18 @@
               
             </div>
           
+		
+		<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+		<div class="widget-wrap">
+		    <h3 class="widget-title">标签云</h3>
+		    <div id="myCanvasContainer" class="widget tagcloud">
+			<canvas width="250" height="250" id="resCanvas" style="width=100%;">
+			    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/GC/">GC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTPS/">HTTPS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/">JVM</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSL证书/">SSL证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/">excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jar/">jar</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mybatis/">mybatis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springmvc/">springmvc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tomcat/">tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/今文古译/">今文古译</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/加密/">加密</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板/">模板</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/遍历/">遍历</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/阿里云/">阿里云</a><span class="tag-list-count">1</span></li></ul>
+			</canvas>
+		    </div>
+		</div>
+		
 
           
           
@@ -1050,7 +1197,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Smartfoot</span>
+  <span class="author" itemprop="copyrightHolder">smartfoot</span>
 
   
 
@@ -1189,6 +1336,31 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'XzyBePMyEqqofImiXeLMTzkF-gzGzoHsz',
+        appKey: 'MlfsSULof3g12tWCp6160Uld',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
 
