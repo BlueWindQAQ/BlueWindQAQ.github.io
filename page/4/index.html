@@ -64,10 +64,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/xjy-apple-touch-icon-next.png?v=6.4.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/xjy-32x32.png?v=6.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/xjy_logo-32x32.png?v=6.4.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/xjy-16x16.png?v=6.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/xjy_logo-16x16.png?v=6.4.0">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
@@ -345,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/07/06/article-4/">
+    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/06/07/oracle-锁表查询和解锁/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="smartfoot">
@@ -364,8 +364,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/06/article-4/" itemprop="url">
-                  java实现excel模板导出数据
+                <a class="post-title-link" href="/2018/06/07/oracle-锁表查询和解锁/" itemprop="url">
+                  oracle 锁表查询和解锁
                 </a>
               
             
@@ -391,12 +391,24 @@
                 
               
 
-              <time title="创建时间：2018-07-06 17:14:58 / 修改时间：17:23:46" itemprop="dateCreated datePublished" datetime="2018-07-06T17:14:58+08:00">2018-07-06</time>
+              <time title="创建时间：2018-06-07 15:34:04" itemprop="dateCreated datePublished" datetime="2018-06-07T15:34:04+08:00">2018-06-07</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-06-26 14:13:44" itemprop="dateModified" datetime="2018-06-26T14:13:44+08:00">2018-06-26</time>
               
             
           </span>
@@ -413,7 +425,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
 
                 
                 
@@ -428,8 +440,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/06/article-4/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/07/06/article-4/" itemprop="commentCount"></span>
+                <a href="/2018/06/07/oracle-锁表查询和解锁/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/06/07/oracle-锁表查询和解锁/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -452,7 +464,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  424字
+                  311字
                 </span>
               
 
@@ -490,11 +502,10 @@
 
       
         
-          <p>web项目导出excel有很多种方法，个人觉得使用<code>excel模板</code>导出比较好用，可以满足甲方对excel格式的多种需求，而且实现起来方便。</p>
-<p>准备需要的jar：<a href="https://download.csdn.net/download/lvchengfengdehao/10524351" target="_blank" rel="noopener">下载地址</a><br>freemarker-2.3.19.jar<br>freemarker-util-0.0.1.jar<br>jxl-2.6.10.jar<br>jxl-report-1.0.jar<br>
+          <h1 id="1-查看里面的锁"><a href="#1-查看里面的锁" class="headerlink" title="1.查看里面的锁"></a>1.查看里面的锁</h1><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT <span class="keyword">b. </span>OWNER, <span class="keyword">b.object_name, </span>l.session_id, l.locked_mode</span><br><span class="line">FROM v$locked_object l, dba_objects <span class="keyword">b</span></span><br><span class="line"><span class="keyword">WHERE </span><span class="keyword">b.object_id </span>= l.object_id<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">SELECT <span class="built_in">t2</span>.username, <span class="built_in">t2</span>.sid, <span class="built_in">t2</span>.serial <span class="comment">#, t2.logon_time</span></span><br><span class="line">FROM v$locked_object <span class="built_in">t1</span>, v$session <span class="built_in">t2</span></span><br><span class="line">WHERE <span class="built_in">t1</span>.session_id = <span class="built_in">t2</span>.sid</span><br><span class="line"><span class="keyword">ORDER </span><span class="keyword">BY </span><span class="built_in">t2</span>.logon_time</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/06/article-4/#more" rel="contents">
+          <div class="post-button text-right">
+            <a class="btn" href="/2018/06/07/oracle-锁表查询和解锁/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -555,7 +566,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/06/23/article-3/">
+    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/06/06/hexo常用命令笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="smartfoot">
@@ -574,8 +585,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/23/article-3/" itemprop="url">
-                  博客文字增加背景色块
+                <a class="post-title-link" href="/2018/06/06/hexo常用命令笔记/" itemprop="url">
+                  hexo常用命令笔记
                 </a>
               
             
@@ -601,12 +612,24 @@
                 
               
 
-              <time title="创建时间：2018-06-23 15:35:00 / 修改时间：17:41:53" itemprop="dateCreated datePublished" datetime="2018-06-23T15:35:00+08:00">2018-06-23</time>
+              <time title="创建时间：2018-06-06 11:52:49" itemprop="dateCreated datePublished" datetime="2018-06-06T11:52:49+08:00">2018-06-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-06-11 11:47:47" itemprop="dateModified" datetime="2018-06-11T11:47:47+08:00">2018-06-11</time>
               
             
           </span>
@@ -638,8 +661,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/23/article-3/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/06/23/article-3/" itemprop="commentCount"></span>
+                <a href="/2018/06/06/hexo常用命令笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/06/06/hexo常用命令笔记/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -662,7 +685,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  328字
+                  910字
                 </span>
               
 
@@ -678,7 +701,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2分钟
+                  4分钟
                 </span>
               
             </div>
@@ -700,13 +723,13 @@
 
       
         
-          <ul>
-<li>文字<code>配置</code>效果如下：</li>
-</ul>
-<p><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span><br>
+          <p><strong>hexo</strong><br></p>
+<blockquote>
+<p>npm install hexo -g #安装<br>npm update hexo -g #升级<br>hexo init #初始化</p>
+</blockquote>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/23/article-3/#more" rel="contents">
+          <div class="post-button text-right">
+            <a class="btn" href="/2018/06/06/hexo常用命令笔记/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -767,7 +790,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/06/15/article-2/">
+    <link itemprop="mainEntityOfPage" href="http://blog.bestsmartfoot.top/2018/06/05/数据库字段加解密处理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="smartfoot">
@@ -786,8 +809,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/15/article-2/" itemprop="url">
-                  SSL证书让网站从HTTP换成HTTPS
+                <a class="post-title-link" href="/2018/06/05/数据库字段加解密处理/" itemprop="url">
+                  数据库字段加解密处理
                 </a>
               
             
@@ -813,7 +836,7 @@
                 
               
 
-              <time title="创建时间：2018-06-15 14:46:46" itemprop="dateCreated datePublished" datetime="2018-06-15T14:46:46+08:00">2018-06-15</time>
+              <time title="创建时间：2018-06-05 14:35:03" itemprop="dateCreated datePublished" datetime="2018-06-05T14:35:03+08:00">2018-06-05</time>
             
 
             
@@ -830,7 +853,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-26 14:01:43" itemprop="dateModified" datetime="2018-06-26T14:01:43+08:00">2018-06-26</time>
+                <time title="修改时间：2018-06-26 14:23:20" itemprop="dateModified" datetime="2018-06-26T14:23:20+08:00">2018-06-26</time>
               
             
           </span>
@@ -847,7 +870,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/阿里云/" itemprop="url" rel="index"><span itemprop="name">阿里云</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
 
                 
                 
@@ -862,8 +885,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/15/article-2/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/06/15/article-2/" itemprop="commentCount"></span>
+                <a href="/2018/06/05/数据库字段加解密处理/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/06/05/数据库字段加解密处理/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -886,7 +909,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  795字
+                  386字
                 </span>
               
 
@@ -902,7 +925,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3分钟
+                  2分钟
                 </span>
               
             </div>
@@ -924,11 +947,10 @@
 
       
         
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>HTTP</code> 协议是不加密传输数据的，也就是用户跟你的网站之间传递数据有可能在途中被截获，破解传递的真实内容，所以使用不加密的 <code>HTTP</code> 的网站是不太安全的。所以， <code>Google</code> 的 <code>Chrome</code> 浏览器将在 2017 年 1 月开始，标记使用不加密的 <code>HTTP</code> 协议的网站为 <code>Not Secure</code>，不安全。</p>
-<p>如何改变呢，有免费的吗？<br>
+          <p><strong>解决场景：</strong><br>  需要对应用数据存储时采取加密，比如手机号码、地址、证件号<br><br><strong>方案：</strong><br><br><img src="https://i.imgur.com/AzRjjpQ.png" alt=""><br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/15/article-2/#more" rel="contents">
+          <div class="post-button text-right">
+            <a class="btn" href="/2018/06/05/数据库字段加解密处理/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -978,7 +1000,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
   </nav>
 
 
