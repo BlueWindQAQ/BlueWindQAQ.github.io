@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-08-20T07:37:51.580Z</updated>
+  <updated>2018-08-23T02:17:37.469Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo添加右侧公众号</title>
+    <link href="http://blog.bestsmartfoot.top/2018/08/23/hexo-wechat-qrcode/"/>
+    <id>http://blog.bestsmartfoot.top/2018/08/23/hexo-wechat-qrcode/</id>
+    <published>2018-08-23T02:09:36.000Z</published>
+    <updated>2018-08-23T02:17:37.469Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hexo添加右侧公众号页面需在两处添加代码&lt;br&gt;1、css&lt;br&gt;css添加在主题文件下的source/css/_schemes/主题名称文件夹/_layout
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://blog.bestsmartfoot.top/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://blog.bestsmartfoot.top/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>JVM大对象直接进入老年代</title>

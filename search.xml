@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo添加右侧公众号]]></title>
+    <url>%2F2018%2F08%2F23%2Fhexo-wechat-qrcode%2F</url>
+    <content type="text"><![CDATA[hexo添加右侧公众号页面需在两处添加代码1、csscss添加在主题文件下的source/css/_schemes/主题名称文件夹/_layout123456789101112131415161718192021222324252627282930313233343536373839.paral&#123; position: absolute; top: 10%; right: 0; width:200px; height:140px; -webkit-user-select:none; ##禁止鼠标选中 -moz-user-select:none; -ms-user-select:none; user-select:none;&#125;.zi&#123; position: absolute; right: 0; width:30px; height:120px; writing-mode: vertical-lr; ##文字垂直 text-align:center; ##文字居中 background-color:#e2e5b7; font-size:18px; cursor:pointer; ##划过时鼠标样式 top:50%; transform:translateY(-50%); ##p标签垂直居中 border:1px solid #d1d8bd; border-radius:5px; ##边框圆角&#125;.img&#123; position: absolute; right: 60px; width: 140px; height: 140px; display: none; ##默认不显示图片&#125;p:hover +.img &#123; display: block; ##鼠标划过时，改变class--img属性为显示&#125; 2、HTMLHTML代码添加到主题文件夹下layout/_layout.swig中class为main中1234&lt;div class="paral"&gt; &lt;p class="zi"&gt;公众号&lt;/p&gt; &lt;img src="/uploads/qrcode_for_smartfoot.jpg" class="img"&gt;&lt;/div&gt;]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JVM大对象直接进入老年代]]></title>
     <url>%2F2018%2F08%2F20%2Fa8%2F</url>
     <content type="text"><![CDATA[原文：https://book.2cto.com/201306/25496.html 虚拟机提供了一个-XX:PretenureSizeThreshold参数，令大于这个设置值的对象直接在老年代分配。这样做的目的是避免在Eden区及两个Survivor区之间发生大量的内存复制（复习一下：新生代采用复制算法收集内存）。 所谓的大对象是指，需要大量连续内存空间的Java对象，最典型的大对象就是那种很长的字符串以及数组（笔者列出的例子中的byte[]数组就是典型的大对象）。大对象对虚拟机的内存分配来说就是一个坏消息（替Java虚拟机抱怨一句，比遇到一个大对象更加坏的消息就是遇到一群“朝生夕灭”的“短命大对象”，写程序的时候应当避免），经常出现大对象容易导致内存还有不少空间时就提前触发垃圾收集以获取足够的连续空间来“安置”它们。 注意 PretenureSizeThreshold参数只对Serial和ParNew两款收集器有效，Parallel Scavenge收集器不认识这个参数，Parallel Scavenge收集器一般并不需要设置。如果遇到必须使用此参数的场合，可以考虑ParNew加CMS的收集器组合。]]></content>
