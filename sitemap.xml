@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.bestsmartfoot.top/2018/06/11/linux-Nginx/</loc>
+    
+    <lastmod>2018-08-23T07:19:00.502Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.bestsmartfoot.top/2018/08/23/hexo-gitalk/</loc>
     
     <lastmod>2018-08-23T06:06:57.280Z</lastmod>
@@ -145,13 +152,6 @@
     <loc>http://blog.bestsmartfoot.top/about/index.html</loc>
     
     <lastmod>2018-06-12T06:45:21.723Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.bestsmartfoot.top/2018/06/11/linux-%E9%85%8D%E7%BD%AENginx/</loc>
-    
-    <lastmod>2018-06-12T02:19:41.197Z</lastmod>
     
   </url>
   
