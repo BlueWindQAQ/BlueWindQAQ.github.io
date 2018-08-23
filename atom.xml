@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-08-23T02:43:30.045Z</updated>
+  <updated>2018-08-23T06:06:57.280Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo NexT主题中集成gitalk评论系统</title>
+    <link href="http://blog.bestsmartfoot.top/2018/08/23/hexo-gitalk/"/>
+    <id>http://blog.bestsmartfoot.top/2018/08/23/hexo-gitalk/</id>
+    <published>2018-08-23T05:56:11.000Z</published>
+    <updated>2018-08-23T06:06:57.280Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录在NexT主题中添加gitalk评论系统的步骤。&lt;br&gt;gitalk：一个基于 Github Issue 和 Preact 开发的评论插件&lt;br&gt;详情Demo可见：&lt;a href=&quot;https://gitalk.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://gitalk.github.io/&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://blog.bestsmartfoot.top/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://blog.bestsmartfoot.top/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo添加右侧公众号</title>
