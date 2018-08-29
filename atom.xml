@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-08-29T12:02:10.332Z</updated>
+  <updated>2018-08-29T12:47:52.795Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -17,21 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>iostat数据中关于rKB/s 和wKB/s 列解读</title>
+    <link href="http://blog.bestsmartfoot.top/2018/08/29/linux-iostat/"/>
+    <id>http://blog.bestsmartfoot.top/2018/08/29/linux-iostat/</id>
+    <published>2018-08-29T12:42:12.000Z</published>
+    <updated>2018-08-29T12:47:52.795Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;导引&lt;br&gt;天天遇到这两个参数,始终搞不懂,究竟怎么样才算是读写高
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.bestsmartfoot.top/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
+    
+      <category term="I/O" scheme="http://blog.bestsmartfoot.top/tags/I-O/"/>
+    
+  </entry>
+  
+  <entry>
     <title>webstorm 2018 激活破解方法大全</title>
     <link href="http://blog.bestsmartfoot.top/2018/08/29/webstorm-pojie/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/29/webstorm-pojie/</id>
     <published>2018-08-29T11:58:51.000Z</published>
-    <updated>2018-08-29T12:02:10.332Z</updated>
+    <updated>2018-08-29T12:47:35.524Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          
-        
-      
+      &lt;p&gt;webstorm 作为最近最火的前端开发工具,也确实对得起那个价格,但是秉着勤俭节约的传统美德,我们肯定是能省则省啊。
     
     </summary>
     
@@ -444,29 +460,6 @@
     
     
       <category term="今文古译" scheme="http://blog.bestsmartfoot.top/tags/%E4%BB%8A%E6%96%87%E5%8F%A4%E8%AF%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux 配置Nginx</title>
-    <link href="http://blog.bestsmartfoot.top/2018/06/11/linux-Nginx/"/>
-    <id>http://blog.bestsmartfoot.top/2018/06/11/linux-Nginx/</id>
-    <published>2018-06-11T10:22:25.000Z</published>
-    <updated>2018-08-23T07:19:00.502Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Nginx 是 C语言 开发，建议在 Linux 上运行，当然，也可以安装 Windows 版本，本篇则使用 CentOS 7 作为安装环境。&lt;/p&gt;
-&lt;p&gt;首先下载资源包：&lt;br&gt;　安装Nginx之前，首先要安装好编译环境gcc和g++，然后以CentOS为例安装Nginx，安装Nginx需要PRCE库、zlib库和ssl的支持，除了ssl外其他的我们都是去官网下载：&lt;br&gt;　　Nginx：&lt;a href=&quot;http://nginx.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://nginx.org/&lt;/a&gt;&lt;br&gt;　　PCRE：&lt;a href=&quot;http://www.pcre.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.pcre.org/&lt;/a&gt;&lt;br&gt;　　zlib：&lt;a href=&quot;http://www.zlib.net/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.zlib.net/&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.bestsmartfoot.top/categories/linux/"/>
-    
-    
-      <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
-    
-      <category term="nginx" scheme="http://blog.bestsmartfoot.top/tags/nginx/"/>
     
   </entry>
   
