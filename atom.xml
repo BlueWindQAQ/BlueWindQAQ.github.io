@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-08-23T06:06:57.280Z</updated>
+  <updated>2018-08-29T03:07:07.925Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>crontab命令</title>
+    <link href="http://blog.bestsmartfoot.top/2018/08/29/linux-crontab/"/>
+    <id>http://blog.bestsmartfoot.top/2018/08/29/linux-crontab/</id>
+    <published>2018-08-29T02:39:09.000Z</published>
+    <updated>2018-08-29T03:07:07.925Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;crontab命令被用来提交和管理用户的需要周期性执行的任务，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.bestsmartfoot.top/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
+    
+      <category term="crontab" scheme="http://blog.bestsmartfoot.top/tags/crontab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis哨兵模式</title>
+    <link href="http://blog.bestsmartfoot.top/2018/08/28/redis-sentinel/"/>
+    <id>http://blog.bestsmartfoot.top/2018/08/28/redis-sentinel/</id>
+    <published>2018-08-28T10:18:59.000Z</published>
+    <updated>2018-08-29T03:07:28.233Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Redis-Sentinel-模式简介&quot;&gt;&lt;a href=&quot;#Redis-Sentinel-模式简介&quot; class=&quot;headerlink&quot; title=&quot;Redis Sentinel 模式简介&quot;&gt;&lt;/a&gt;Redis Sentinel 模式简介&lt;/h1&gt;&lt;p&gt;Redis-Sentinel是官方推荐的高可用解决方案，当redis在做master-slave的高可用方案时，假如master宕机了，redis本身（以及其很多客户端）都没有实现自动进行主备切换，而redis-sentinel本身也是独立运行的进程，可以部署在其他与redis集群可通讯的机器中监控redis集群。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="redis" scheme="http://blog.bestsmartfoot.top/categories/redis/"/>
+    
+    
+      <category term="redis" scheme="http://blog.bestsmartfoot.top/tags/redis/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo NexT主题中集成gitalk评论系统</title>
@@ -419,49 +461,6 @@
     
     
       <category term="oracle" scheme="http://blog.bestsmartfoot.top/tags/oracle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo常用命令笔记</title>
-    <link href="http://blog.bestsmartfoot.top/2018/06/06/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
-    <id>http://blog.bestsmartfoot.top/2018/06/06/hexo常用命令笔记/</id>
-    <published>2018-06-06T03:52:49.000Z</published>
-    <updated>2018-06-11T03:47:47.346Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;hexo&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;npm install hexo -g #安装&lt;br&gt;npm update hexo -g #升级&lt;br&gt;hexo init #初始化&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://blog.bestsmartfoot.top/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://blog.bestsmartfoot.top/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库字段加解密处理</title>
-    <link href="http://blog.bestsmartfoot.top/2018/06/05/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%97%E6%AE%B5%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%A4%84%E7%90%86/"/>
-    <id>http://blog.bestsmartfoot.top/2018/06/05/数据库字段加解密处理/</id>
-    <published>2018-06-05T06:35:03.000Z</published>
-    <updated>2018-06-26T06:23:20.305Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;解决场景：&lt;/strong&gt;&lt;br&gt;  需要对应用数据存储时采取加密，比如手机号码、地址、证件号&lt;br&gt;&lt;br&gt;&lt;strong&gt;方案：&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/AzRjjpQ.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://blog.bestsmartfoot.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="加密" scheme="http://blog.bestsmartfoot.top/tags/%E5%8A%A0%E5%AF%86/"/>
     
   </entry>
   

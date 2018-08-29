@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://blog.bestsmartfoot.top/2018/08/28/redis-sentinel/</loc>
+    <lastmod>2018-08-29T03:07:28.233Z</lastmod>
+    <data>
+        <display>
+        <title>Redis哨兵模式</title>
+        <pubTime>2018-08-28T10:18:59.000Z</pubTime>
+        
+        <tag>redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="redis" url="http://blog.bestsmartfoot.top/categories/redis/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.bestsmartfoot.top/2018/08/29/linux-crontab/</loc>
+    <lastmod>2018-08-29T03:07:07.925Z</lastmod>
+    <data>
+        <display>
+        <title>crontab命令</title>
+        <pubTime>2018-08-29T02:39:09.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>crontab</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.bestsmartfoot.top/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.bestsmartfoot.top/2018/06/11/linux-Nginx/</loc>
     <lastmod>2018-08-23T07:19:00.502Z</lastmod>
     <data>
