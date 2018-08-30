@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://blog.bestsmartfoot.top/2018/08/30/mysql-innodb-flush-method/</loc>
+    <lastmod>2018-08-30T08:40:59.529Z</lastmod>
+    <data>
+        <display>
+        <title>针对innodb_flush_method参数的理解和对比测试（mycat+mysql）</title>
+        <pubTime>2018-08-30T08:04:01.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="mysql" url="http://blog.bestsmartfoot.top/categories/mysql/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.bestsmartfoot.top/2018/08/29/linux-iostat/</loc>
     <lastmod>2018-08-29T12:47:52.795Z</lastmod>
     <data>

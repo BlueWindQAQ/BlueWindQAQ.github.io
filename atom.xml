@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-08-29T12:47:52.795Z</updated>
+  <updated>2018-08-30T08:40:59.529Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>针对innodb_flush_method参数的理解和对比测试（mycat+mysql）</title>
+    <link href="http://blog.bestsmartfoot.top/2018/08/30/mysql-innodb-flush-method/"/>
+    <id>http://blog.bestsmartfoot.top/2018/08/30/mysql-innodb-flush-method/</id>
+    <published>2018-08-30T08:04:01.000Z</published>
+    <updated>2018-08-30T08:40:59.529Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://blog.bestsmartfoot.top/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="http://blog.bestsmartfoot.top/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>iostat数据中关于rKB/s 和wKB/s 列解读</title>
@@ -438,28 +464,6 @@
     
     
       <category term="jar" scheme="http://blog.bestsmartfoot.top/tags/jar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>有人用古文翻译了当下流行话语，对比一下古文有多美！</title>
-    <link href="http://blog.bestsmartfoot.top/2018/06/12/%E6%9C%89%E4%BA%BA%E7%94%A8%E5%8F%A4%E6%96%87%E7%BF%BB%E8%AF%91%E4%BA%86%E5%BD%93%E4%B8%8B%E6%B5%81%E8%A1%8C%E8%AF%9D%E8%AF%AD%EF%BC%8C%E5%AF%B9%E6%AF%94%E4%B8%80%E4%B8%8B%E5%8F%A4%E6%96%87%E6%9C%89%E5%A4%9A%E7%BE%8E%EF%BC%81/"/>
-    <id>http://blog.bestsmartfoot.top/2018/06/12/有人用古文翻译了当下流行话语，对比一下古文有多美！/</id>
-    <published>2018-06-12T07:51:37.000Z</published>
-    <updated>2018-06-23T07:37:53.900Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;有人用古文翻译了当下流行话语，对比一下古文有多美！&lt;/p&gt;
-&lt;p&gt;【一】&lt;/p&gt;
-&lt;p&gt;原文：每天都被自己帅到睡不着&lt;br&gt;翻译：玉树临风美少年，揽镜自顾夜不眠。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="摘录" scheme="http://blog.bestsmartfoot.top/categories/%E6%91%98%E5%BD%95/"/>
-    
-    
-      <category term="今文古译" scheme="http://blog.bestsmartfoot.top/tags/%E4%BB%8A%E6%96%87%E5%8F%A4%E8%AF%91/"/>
     
   </entry>
   

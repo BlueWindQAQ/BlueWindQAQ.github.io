@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[针对innodb_flush_method参数的理解和对比测试（mycat+mysql）]]></title>
+    <url>%2F2018%2F08%2F30%2Fmysql-innodb-flush-method%2F</url>
+    <content type="text"><![CDATA[mysql的innodb_flush_method这个参数控制着innodb数据文件及redo log的打开、刷写模式，对于这个参数，文档上是这样描述的：有三个值：fdatasync(默认)，O_DSYNC，O_DIRECT默认是fdatasync，调用fsync()去刷数据文件与redo log的buffer为O_DSYNC时，innodb会使用O_SYNC方式打开和刷写redo log,使用fsync()刷写数据文件为O_DIRECT时，innodb使用O_DIRECT打开数据文件，使用fsync()刷写数据文件跟redo log首先文件的写操作包括三步：open,write,flush上面最常提到的fsync(int fd)函数，该函数作用是flush时将与fd文件描述符所指文件有关的buffer刷写到磁盘，并且flush完元数据信息(比如修改日期、创建日期等)才算flush成功。使用O_DSYNC方式打开redo文件表示当write日志时，数据都write到磁盘，并且元数据也需要更新，才返回成功。O_DIRECT则表示我们的write操作是从MySQL innodb buffer里直接向磁盘上写。 这三种模式写数据方式具体如下： fdatasync模式：写数据时，write这一步并不需要真正写到磁盘才算完成（可能写入到操作系统buffer中就会返回完成），真正完成是flush操作，buffer交给操作系统去flush,并且文件的元数据信息也都需要更新到磁盘。O_DSYNC模式：写日志操作是在write这步完成，而数据文件的写入是在flush这步通过fsync完成O_DIRECT模式：数据文件的写入操作是直接从mysql innodb buffer到磁盘的，并不用通过操作系统的缓冲，而真正的完成也是在flush这步,日志还是要经过OS缓冲 原文：https://blog.csdn.net/smooth00/article/details/72725941]]></content>
+      <categories>
+        <category>mysql</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[iostat数据中关于rKB/s 和wKB/s 列解读]]></title>
     <url>%2F2018%2F08%2F29%2Flinux-iostat%2F</url>
     <content type="text"><![CDATA[导引天天遇到这两个参数,始终搞不懂,究竟怎么样才算是读写高1234567891011avg-cpu: %user %nice %system %iowait %steal %idle 36.04 0.00 14.47 1.78 0.00 47.72Device: rrqm/s wrqm/s r/s w/s rkB/s wkB/s avgrq-sz avgqu-sz await r_await w_await svctm %utilvda 0.00 0.00 125.00 278.00 2000.00 11617.00 67.58 0.55 1.36 1.07 1.49 0.77 31.20avg-cpu: %user %nice %system %iowait %steal %idle 23.65 0.00 7.46 1.29 0.00 67.61Device: rrqm/s wrqm/s r/s w/s rkB/s wkB/s avgrq-sz avgqu-sz await r_await w_await svctm %utilvda 0.00 0.00 71.00 271.00 1136.00 11287.00 72.65 0.53 1.55 1.17 1.65 0.77 26.40 含义: 而rKB/s 和wKB/s 列:每秒千字节为单位显示了读和写的数据量 如果这两对数据值都很高的话说明磁盘io操作是很频繁(注:高是怎么衡量的?) 两对数据值都很高的话说明磁盘io操作是很频繁]]></content>
