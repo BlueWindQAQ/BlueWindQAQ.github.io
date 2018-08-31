@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://blog.bestsmartfoot.top/2018/08/30/mysql-innodb-flush-method/</loc>
-    <lastmod>2018-08-30T08:40:59.529Z</lastmod>
+    <lastmod>2018-08-30T08:43:06.664Z</lastmod>
     <data>
         <display>
         <title>针对innodb_flush_method参数的理解和对比测试（mycat+mysql）</title>
