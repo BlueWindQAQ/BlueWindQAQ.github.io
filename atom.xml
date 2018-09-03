@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-08-30T08:43:06.664Z</updated>
+  <updated>2018-09-03T03:40:30.630Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -21,17 +21,11 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/30/mysql-innodb-flush-method/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/30/mysql-innodb-flush-method/</id>
     <published>2018-08-30T08:04:01.000Z</published>
-    <updated>2018-08-30T08:43:06.664Z</updated>
+    <updated>2018-09-03T03:40:30.630Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          
-        
-      
+      &lt;p&gt;mysql的&lt;code&gt;innodb_flush_method&lt;/code&gt;这个参数控制着innodb数据文件及redo log的打开、刷写模式，对于这个参数，文档上是这样描述的：&lt;br&gt;有三个值：fdatasync(默认)，O_DSYNC，O_DIRECT
     
     </summary>
     
