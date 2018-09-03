@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用git将项目上传到github]]></title>
+    <url>%2F2018%2F09%2F03%2Fgit-new%2F</url>
+    <content type="text"><![CDATA[使用git将项目上传到github（最简单方法）首先你需要一个github账号，所有还没有的话先去注册吧！我们使用git需要先安装git工具，这里给出下载地址，下载后一路直接安装即可： 进入Github首页，点击New repository新建一个项目 填写相应信息后点击create即可Repository name: 仓库名称Description(可选): 仓库描述介绍Public, Private : 仓库权限（公开共享，私有或指定合作者）Initialize this repository with a README: 添加一个README.mdgitignore: 不需要进行版本管理的仓库类型，对应生成文件.gitignorelicense: 证书类型，对应生成文件LICENSE 点击Clone or dowload会出现一个地址，copy这个地址备用。 接下来就到本地操作了，首先右键你的项目，如果你之前安装git成功的话，右键会出现两个新选项，分别为Git Gui Here,Git Bash Here,这里我们选择Git Bash Here，进入如下界面，blog-hexo即为我的项目名。 接下来输入如下代码（关键步骤），把github上面的仓库克隆到本地git clone https://github.com/BlueWindQAQ/blog-hexo.git（https://github.com/BlueWindQAQ/blog-hexo.git替换成你之前复制的地址） 这个步骤以后你的本地项目文件夹下面就会多出个文件夹，该文件夹名即为你github上面的项目名，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹不用），其余都复制到那个新多出的文件夹下， 接下来依次输入以下代码即可完成其他剩余操作： git add . （注：别忘记后面的.，此操作是把文件夹下面的文件都添加进来）git commit -m “提交信息” （注：“提交信息”里面换成你需要，如“first commit”）git push -u origin master （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码） 原文：https://www.cnblogs.com/cxk1995/p/5800196.html]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[针对innodb_flush_method参数的理解和对比测试（mycat+mysql）]]></title>
     <url>%2F2018%2F08%2F30%2Fmysql-innodb-flush-method%2F</url>
     <content type="text"><![CDATA[mysql的innodb_flush_method这个参数控制着innodb数据文件及redo log的打开、刷写模式，对于这个参数，文档上是这样描述的：有三个值：fdatasync(默认)，O_DSYNC，O_DIRECT默认是fdatasync，调用fsync()去刷数据文件与redo log的buffer为O_DSYNC时，innodb会使用O_SYNC方式打开和刷写redo log,使用fsync()刷写数据文件为O_DIRECT时，innodb使用O_DIRECT打开数据文件，使用fsync()刷写数据文件跟redo log首先文件的写操作包括三步：open,write,flush上面最常提到的fsync(int fd)函数，该函数作用是flush时将与fd文件描述符所指文件有关的buffer刷写到磁盘，并且flush完元数据信息(比如修改日期、创建日期等)才算flush成功。使用O_DSYNC方式打开redo文件表示当write日志时，数据都write到磁盘，并且元数据也需要更新，才返回成功。O_DIRECT则表示我们的write操作是从MySQL innodb buffer里直接向磁盘上写。 这三种模式写数据方式具体如下： fdatasync模式：写数据时，write这一步并不需要真正写到磁盘才算完成（可能写入到操作系统buffer中就会返回完成），真正完成是flush操作，buffer交给操作系统去flush,并且文件的元数据信息也都需要更新到磁盘。O_DSYNC模式：写日志操作是在write这步完成，而数据文件的写入是在flush这步通过fsync完成O_DIRECT模式：数据文件的写入操作是直接从mysql innodb buffer到磁盘的，并不用通过操作系统的缓冲，而真正的完成也是在flush这步,日志还是要经过OS缓冲 原文：https://blog.csdn.net/smooth00/article/details/72725941]]></content>
@@ -14,7 +26,7 @@
   <entry>
     <title><![CDATA[iostat数据中关于rKB/s 和wKB/s 列解读]]></title>
     <url>%2F2018%2F08%2F29%2Flinux-iostat%2F</url>
-    <content type="text"><![CDATA[导引天天遇到这两个参数,始终搞不懂,究竟怎么样才算是读写高1234567891011avg-cpu: %user %nice %system %iowait %steal %idle 36.04 0.00 14.47 1.78 0.00 47.72Device: rrqm/s wrqm/s r/s w/s rkB/s wkB/s avgrq-sz avgqu-sz await r_await w_await svctm %utilvda 0.00 0.00 125.00 278.00 2000.00 11617.00 67.58 0.55 1.36 1.07 1.49 0.77 31.20avg-cpu: %user %nice %system %iowait %steal %idle 23.65 0.00 7.46 1.29 0.00 67.61Device: rrqm/s wrqm/s r/s w/s rkB/s wkB/s avgrq-sz avgqu-sz await r_await w_await svctm %utilvda 0.00 0.00 71.00 271.00 1136.00 11287.00 72.65 0.53 1.55 1.17 1.65 0.77 26.40 含义: 而rKB/s 和wKB/s 列:每秒千字节为单位显示了读和写的数据量 如果这两对数据值都很高的话说明磁盘io操作是很频繁(注:高是怎么衡量的?) 两对数据值都很高的话说明磁盘io操作是很频繁]]></content>
+    <content type="text"><![CDATA[导引rKB/s 和wKB/s这两个参数,究竟怎么样才算是读写高1234567891011avg-cpu: %user %nice %system %iowait %steal %idle 36.04 0.00 14.47 1.78 0.00 47.72Device: rrqm/s wrqm/s r/s w/s rkB/s wkB/s avgrq-sz avgqu-sz await r_await w_await svctm %utilvda 0.00 0.00 125.00 278.00 2000.00 11617.00 67.58 0.55 1.36 1.07 1.49 0.77 31.20avg-cpu: %user %nice %system %iowait %steal %idle 23.65 0.00 7.46 1.29 0.00 67.61Device: rrqm/s wrqm/s r/s w/s rkB/s wkB/s avgrq-sz avgqu-sz await r_await w_await svctm %utilvda 0.00 0.00 71.00 271.00 1136.00 11287.00 72.65 0.53 1.55 1.17 1.65 0.77 26.40 含义: 而rKB/s 和wKB/s 列:每秒千字节为单位显示了读和写的数据量 如果这两对数据值都很高的话说明磁盘io操作是很频繁(注:高是怎么衡量的?) 两对数据值都很高的话说明磁盘io操作是很频繁]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -24,7 +36,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[webstorm 2018 激活破解方法大全]]></title>
+    <title><![CDATA[webstorm 2018 激活破解方法]]></title>
     <url>%2F2018%2F08%2F29%2Fwebstorm-pojie%2F</url>
     <content type="text"><![CDATA[webstorm 作为最近最火的前端开发工具,也确实对得起那个价格,但是秉着勤俭节约的传统美德,我们肯定是能省则省啊。方法一注册时，在打开的License Activation窗口中选择“License server”，在输入框输入下面的网址：http://180.76.140.202:9123 (2018/07/20)http://idea.wrbugtest.tk/ (2018/06/16)点击：Activate即可。更多方法移步原文：https://blog.csdn.net/voke_/article/details/76418116]]></content>
       <categories>
