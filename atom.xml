@@ -6,22 +6,63 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-09-03T11:57:45.684Z</updated>
+  <updated>2018-09-05T10:02:23.118Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
-    <name>smartfoot</name>
+    <name>Smartfoot</name>
     <email>951077883@qq.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Storm 学习（二）起步</title>
+    <link href="http://blog.bestsmartfoot.top/2018/09/05/storm-02/"/>
+    <id>http://blog.bestsmartfoot.top/2018/09/05/storm-02/</id>
+    <published>2018-09-05T08:34:23.000Z</published>
+    <updated>2018-09-05T10:02:23.118Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;准备开始&lt;/strong&gt;&lt;br&gt;在本章，我们要创建一个 Storm 工程和我们的第一个 Storm 拓扑结构。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 下面假设你的 JRE 版本在 1.6 以上。我们推荐 Oracle 提供的 JRE。你可以到 &lt;a href=&quot;http://www.java.com/downloads/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.java.com/downloads/&lt;/a&gt; 下载。
+    
+    </summary>
+    
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Storm" scheme="http://blog.bestsmartfoot.top/tags/Storm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Storm 学习（一） 基础知识</title>
+    <link href="http://blog.bestsmartfoot.top/2018/09/05/storm-01/"/>
+    <id>http://blog.bestsmartfoot.top/2018/09/05/storm-01/</id>
+    <published>2018-09-05T08:23:53.000Z</published>
+    <updated>2018-09-05T08:34:54.605Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;基础知识&lt;/strong&gt;&lt;br&gt;Storm 是一个分布式的，可靠的，容错的数据流处理系统。它会把工作任务委托给不同类型的组件，每个组件负责处理一项简单特定的任务。Storm 集群的输入流由一个被称作 spout 的组件管理，spout 把数据传递给 bolt， bolt 要么把数据保存到某种存储器，要么把数据传递给其它的 bolt。
+    
+    </summary>
+    
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Storm" scheme="http://blog.bestsmartfoot.top/tags/Storm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用git将项目上传到github</title>
     <link href="http://blog.bestsmartfoot.top/2018/09/03/git-new/"/>
     <id>http://blog.bestsmartfoot.top/2018/09/03/git-new/</id>
     <published>2018-09-03T11:43:49.000Z</published>
-    <updated>2018-09-03T11:57:45.684Z</updated>
+    <updated>2018-09-05T08:54:01.383Z</updated>
     
     <summary type="html">
     
@@ -29,7 +70,7 @@
     
     </summary>
     
-      <category term="git" scheme="http://blog.bestsmartfoot.top/categories/git/"/>
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="git" scheme="http://blog.bestsmartfoot.top/tags/git/"/>
@@ -43,7 +84,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/30/mysql-innodb-flush-method/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/30/mysql-innodb-flush-method/</id>
     <published>2018-08-30T08:04:01.000Z</published>
-    <updated>2018-09-03T03:40:30.630Z</updated>
+    <updated>2018-09-05T08:52:19.893Z</updated>
     
     <summary type="html">
     
@@ -51,10 +92,12 @@
     
     </summary>
     
-      <category term="mysql" scheme="http://blog.bestsmartfoot.top/categories/mysql/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="mysql" scheme="http://blog.bestsmartfoot.top/tags/mysql/"/>
+    
+      <category term="数据库" scheme="http://blog.bestsmartfoot.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
@@ -63,7 +106,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/29/linux-iostat/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/29/linux-iostat/</id>
     <published>2018-08-29T12:42:12.000Z</published>
-    <updated>2018-09-03T11:26:33.033Z</updated>
+    <updated>2018-09-05T08:52:34.631Z</updated>
     
     <summary type="html">
     
@@ -71,7 +114,7 @@
     
     </summary>
     
-      <category term="linux" scheme="http://blog.bestsmartfoot.top/categories/linux/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
@@ -85,7 +128,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/29/webstorm-pojie/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/29/webstorm-pojie/</id>
     <published>2018-08-29T11:58:51.000Z</published>
-    <updated>2018-09-03T11:40:59.964Z</updated>
+    <updated>2018-09-05T08:51:10.263Z</updated>
     
     <summary type="html">
     
@@ -93,7 +136,7 @@
     
     </summary>
     
-      <category term="webstorm" scheme="http://blog.bestsmartfoot.top/categories/webstorm/"/>
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="webstorm" scheme="http://blog.bestsmartfoot.top/tags/webstorm/"/>
@@ -105,7 +148,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/29/linux-crontab/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/29/linux-crontab/</id>
     <published>2018-08-29T02:39:09.000Z</published>
-    <updated>2018-08-29T03:07:07.925Z</updated>
+    <updated>2018-09-05T08:52:39.284Z</updated>
     
     <summary type="html">
     
@@ -113,7 +156,7 @@
     
     </summary>
     
-      <category term="linux" scheme="http://blog.bestsmartfoot.top/categories/linux/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
@@ -127,7 +170,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/28/redis-sentinel/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/28/redis-sentinel/</id>
     <published>2018-08-28T10:18:59.000Z</published>
-    <updated>2018-08-29T03:07:28.233Z</updated>
+    <updated>2018-09-05T08:51:26.647Z</updated>
     
     <summary type="html">
     
@@ -135,7 +178,7 @@
     
     </summary>
     
-      <category term="redis" scheme="http://blog.bestsmartfoot.top/categories/redis/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="redis" scheme="http://blog.bestsmartfoot.top/tags/redis/"/>
@@ -147,7 +190,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/23/hexo-gitalk/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/23/hexo-gitalk/</id>
     <published>2018-08-23T05:56:11.000Z</published>
-    <updated>2018-08-23T06:06:57.280Z</updated>
+    <updated>2018-09-05T08:53:53.019Z</updated>
     
     <summary type="html">
     
@@ -155,10 +198,12 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://blog.bestsmartfoot.top/categories/hexo/"/>
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="hexo" scheme="http://blog.bestsmartfoot.top/tags/hexo/"/>
+    
+      <category term="博客" scheme="http://blog.bestsmartfoot.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -167,7 +212,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/23/hexo-wechat-qrcode/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/23/hexo-wechat-qrcode/</id>
     <published>2018-08-23T02:09:36.000Z</published>
-    <updated>2018-08-23T02:43:30.045Z</updated>
+    <updated>2018-09-05T08:53:46.960Z</updated>
     
     <summary type="html">
     
@@ -175,10 +220,12 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://blog.bestsmartfoot.top/categories/hexo/"/>
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="hexo" scheme="http://blog.bestsmartfoot.top/tags/hexo/"/>
+    
+      <category term="博客" scheme="http://blog.bestsmartfoot.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -187,7 +234,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/20/a8/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/20/a8/</id>
     <published>2018-08-20T07:02:16.000Z</published>
-    <updated>2018-08-20T07:37:51.580Z</updated>
+    <updated>2018-09-05T08:54:44.954Z</updated>
     
     <summary type="html">
     
@@ -196,7 +243,7 @@
     
     </summary>
     
-      <category term="JVM" scheme="http://blog.bestsmartfoot.top/categories/JVM/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="JVM" scheme="http://blog.bestsmartfoot.top/tags/JVM/"/>
@@ -208,7 +255,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/20/a7/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/20/a7/</id>
     <published>2018-08-20T06:59:55.000Z</published>
-    <updated>2018-08-20T07:37:59.084Z</updated>
+    <updated>2018-09-05T08:54:49.696Z</updated>
     
     <summary type="html">
     
@@ -216,7 +263,7 @@
     
     </summary>
     
-      <category term="JVM" scheme="http://blog.bestsmartfoot.top/categories/JVM/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="JVM" scheme="http://blog.bestsmartfoot.top/tags/JVM/"/>
@@ -230,7 +277,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/20/a6/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/20/a6/</id>
     <published>2018-08-20T06:58:36.000Z</published>
-    <updated>2018-08-20T07:38:54.299Z</updated>
+    <updated>2018-09-05T08:54:53.591Z</updated>
     
     <summary type="html">
     
@@ -244,7 +291,7 @@
     
     </summary>
     
-      <category term="JVM" scheme="http://blog.bestsmartfoot.top/categories/JVM/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="JVM" scheme="http://blog.bestsmartfoot.top/tags/JVM/"/>
@@ -256,7 +303,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/20/a5/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/20/a5/</id>
     <published>2018-08-20T06:56:19.000Z</published>
-    <updated>2018-08-20T07:38:06.422Z</updated>
+    <updated>2018-09-05T08:54:59.512Z</updated>
     
     <summary type="html">
     
@@ -264,7 +311,7 @@
     
     </summary>
     
-      <category term="tomcat" scheme="http://blog.bestsmartfoot.top/categories/tomcat/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="tomcat" scheme="http://blog.bestsmartfoot.top/tags/tomcat/"/>
@@ -276,7 +323,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/20/a4/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/20/a4/</id>
     <published>2018-08-20T06:49:28.000Z</published>
-    <updated>2018-08-20T07:38:10.443Z</updated>
+    <updated>2018-09-05T08:55:06.276Z</updated>
     
     <summary type="html">
     
@@ -284,7 +331,7 @@
     
     </summary>
     
-      <category term="mybatis" scheme="http://blog.bestsmartfoot.top/categories/mybatis/"/>
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="springmvc" scheme="http://blog.bestsmartfoot.top/tags/springmvc/"/>
@@ -300,7 +347,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/15/a3/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/15/a3/</id>
     <published>2018-08-15T08:16:54.000Z</published>
-    <updated>2018-08-15T12:21:50.296Z</updated>
+    <updated>2018-09-05T08:55:15.422Z</updated>
     
     <summary type="html">
     
@@ -311,7 +358,7 @@
     
     </summary>
     
-      <category term="maven" scheme="http://blog.bestsmartfoot.top/categories/maven/"/>
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="maven" scheme="http://blog.bestsmartfoot.top/tags/maven/"/>
@@ -323,7 +370,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/15/a2/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/15/a2/</id>
     <published>2018-08-15T02:43:28.000Z</published>
-    <updated>2018-08-15T12:22:33.587Z</updated>
+    <updated>2018-09-05T08:55:22.142Z</updated>
     
     <summary type="html">
     
@@ -335,7 +382,7 @@
     
     </summary>
     
-      <category term="JVM" scheme="http://blog.bestsmartfoot.top/categories/JVM/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="JVM" scheme="http://blog.bestsmartfoot.top/tags/JVM/"/>
@@ -349,7 +396,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/08/13/a1/"/>
     <id>http://blog.bestsmartfoot.top/2018/08/13/a1/</id>
     <published>2018-08-13T06:39:31.000Z</published>
-    <updated>2018-08-13T08:02:56.733Z</updated>
+    <updated>2018-09-05T08:55:27.131Z</updated>
     
     <summary type="html">
     
@@ -357,7 +404,7 @@
     
     </summary>
     
-      <category term="linux" scheme="http://blog.bestsmartfoot.top/categories/linux/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
@@ -369,7 +416,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/07/12/article-5/"/>
     <id>http://blog.bestsmartfoot.top/2018/07/12/article-5/</id>
     <published>2018-07-12T10:52:05.000Z</published>
-    <updated>2018-07-12T10:55:22.549Z</updated>
+    <updated>2018-09-05T08:54:06.605Z</updated>
     
     <summary type="html">
     
@@ -381,7 +428,7 @@
     
     </summary>
     
-      <category term="maven" scheme="http://blog.bestsmartfoot.top/categories/maven/"/>
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="maven" scheme="http://blog.bestsmartfoot.top/tags/maven/"/>
@@ -395,7 +442,7 @@
     <link href="http://blog.bestsmartfoot.top/2018/07/06/article-4/"/>
     <id>http://blog.bestsmartfoot.top/2018/07/06/article-4/</id>
     <published>2018-07-06T09:14:58.000Z</published>
-    <updated>2018-07-06T09:23:46.953Z</updated>
+    <updated>2018-09-05T08:54:11.214Z</updated>
     
     <summary type="html">
     
@@ -404,7 +451,7 @@
     
     </summary>
     
-      <category term="java" scheme="http://blog.bestsmartfoot.top/categories/java/"/>
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="excel" scheme="http://blog.bestsmartfoot.top/tags/excel/"/>
@@ -412,54 +459,6 @@
       <category term="java" scheme="http://blog.bestsmartfoot.top/tags/java/"/>
     
       <category term="模板" scheme="http://blog.bestsmartfoot.top/tags/%E6%A8%A1%E6%9D%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客文字增加背景色块</title>
-    <link href="http://blog.bestsmartfoot.top/2018/06/23/article-3/"/>
-    <id>http://blog.bestsmartfoot.top/2018/06/23/article-3/</id>
-    <published>2018-06-23T07:35:00.000Z</published>
-    <updated>2018-06-23T09:41:53.934Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;文字&lt;code&gt;配置&lt;/code&gt;效果如下：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span id=&quot;inline-blue&quot;&gt; 站点配置文件 &lt;/span&gt;&lt;br&gt;&lt;span id=&quot;inline-purple&quot;&gt; 主题配置文件 &lt;/span&gt;&lt;br&gt;&lt;span id=&quot;inline-yellow&quot;&gt; 站点配置文件 &lt;/span&gt;&lt;br&gt;&lt;span id=&quot;inline-green&quot;&gt; 主题配置文件 &lt;/span&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://blog.bestsmartfoot.top/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://blog.bestsmartfoot.top/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SSL证书让网站从HTTP换成HTTPS</title>
-    <link href="http://blog.bestsmartfoot.top/2018/06/15/article-2/"/>
-    <id>http://blog.bestsmartfoot.top/2018/06/15/article-2/</id>
-    <published>2018-06-15T06:46:46.000Z</published>
-    <updated>2018-06-26T06:01:43.025Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;code&gt;HTTP&lt;/code&gt; 协议是不加密传输数据的，也就是用户跟你的网站之间传递数据有可能在途中被截获，破解传递的真实内容，所以使用不加密的 &lt;code&gt;HTTP&lt;/code&gt; 的网站是不太安全的。所以， &lt;code&gt;Google&lt;/code&gt; 的 &lt;code&gt;Chrome&lt;/code&gt; 浏览器将在 2017 年 1 月开始，标记使用不加密的 &lt;code&gt;HTTP&lt;/code&gt; 协议的网站为 &lt;code&gt;Not Secure&lt;/code&gt;，不安全。&lt;/p&gt;
-&lt;p&gt;如何改变呢，有免费的吗？&lt;br&gt;
-    
-    </summary>
-    
-      <category term="阿里云" scheme="http://blog.bestsmartfoot.top/categories/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
-    
-    
-      <category term="阿里云" scheme="http://blog.bestsmartfoot.top/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
-    
-      <category term="SSL证书" scheme="http://blog.bestsmartfoot.top/tags/SSL%E8%AF%81%E4%B9%A6/"/>
-    
-      <category term="HTTPS" scheme="http://blog.bestsmartfoot.top/tags/HTTPS/"/>
     
   </entry>
   
