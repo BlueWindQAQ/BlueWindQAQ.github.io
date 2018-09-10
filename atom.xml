@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-09-05T10:02:23.118Z</updated>
+  <updated>2018-09-06T09:24:30.379Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql替换字段中部分字符串</title>
+    <link href="http://blog.bestsmartfoot.top/2018/09/06/mysql-replace/"/>
+    <id>http://blog.bestsmartfoot.top/2018/09/06/mysql-replace/</id>
+    <published>2018-09-06T09:09:49.000Z</published>
+    <updated>2018-09-06T09:24:30.379Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;将testsql 表中的pic_url 字段中的所有 aaaa字符串替换成bbbb ;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;UPDATE testsql  set pic_url=REPLACE(pic_url,’aaaa’,’bbbb’);&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="mysql" scheme="http://blog.bestsmartfoot.top/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>Storm 学习（二）起步</title>
@@ -434,31 +457,6 @@
       <category term="maven" scheme="http://blog.bestsmartfoot.top/tags/maven/"/>
     
       <category term="jar" scheme="http://blog.bestsmartfoot.top/tags/jar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>java实现excel模板导出数据</title>
-    <link href="http://blog.bestsmartfoot.top/2018/07/06/article-4/"/>
-    <id>http://blog.bestsmartfoot.top/2018/07/06/article-4/</id>
-    <published>2018-07-06T09:14:58.000Z</published>
-    <updated>2018-09-05T08:54:11.214Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;web项目导出excel有很多种方法，个人觉得使用&lt;code&gt;excel模板&lt;/code&gt;导出比较好用，可以满足甲方对excel格式的多种需求，而且实现起来方便。&lt;/p&gt;
-&lt;p&gt;准备需要的jar：&lt;a href=&quot;https://download.csdn.net/download/lvchengfengdehao/10524351&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;下载地址&lt;/a&gt;&lt;br&gt;freemarker-2.3.19.jar&lt;br&gt;freemarker-util-0.0.1.jar&lt;br&gt;jxl-2.6.10.jar&lt;br&gt;jxl-report-1.0.jar&lt;br&gt;
-    
-    </summary>
-    
-      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="excel" scheme="http://blog.bestsmartfoot.top/tags/excel/"/>
-    
-      <category term="java" scheme="http://blog.bestsmartfoot.top/tags/java/"/>
-    
-      <category term="模板" scheme="http://blog.bestsmartfoot.top/tags/%E6%A8%A1%E6%9D%BF/"/>
     
   </entry>
   
