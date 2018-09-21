@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[异常 The processing instruction target matching [xX][mM][lL] is not allowed]]></title>
+    <url>%2F2018%2F09%2F21%2FError-xml-01%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718192021[Fatal Error] hive-site.xml:3:6: The processing instruction target matching "[xX][mM][lL]" is not allowed.18/09/21 10:26:53 FATAL conf.Configuration: error parsing conf file:/home/hadoop/apache-hive-1.2.0-bin/conf/hive-site.xmlorg.xml.sax.SAXParseException; systemId: file:/home/hadoop/apache-hive-1.2.0-bin/conf/hive-site.xml; lineNumber: 3; columnNumber: 6; The processing instruction target matching "[xX][mM][lL]" is not allowed. at org.apache.xerces.parsers.DOMParser.parse(Unknown Source) at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source) at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:150) at org.apache.hadoop.conf.Configuration.parse(Configuration.java:2352) at org.apache.hadoop.conf.Configuration.parse(Configuration.java:2340) at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:2408) at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:2374) at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2281) at org.apache.hadoop.conf.Configuration.get(Configuration.java:1108) at org.apache.hadoop.hive.conf.HiveConf.getVar(HiveConf.java:2605) ▽&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;&lt;?xml-stylesheet type="text/xsl" href="configuration.xsl"?&gt;&lt;configuration&gt; &lt;property&gt; 这个异常解释为：xml文件不能被解析，一般出现这样的问题在于xml格式上，并且问题多出现在xml文件的头部，这是因为xml文件头部有两行空行，第三行才开始写总结：&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;前面不要有任何其他字符，如空格、回车、换行这些否则就会出现上面的异常。]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>error</tag>
+        <tag>xml</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux-JAVA JPS 命令详解]]></title>
+    <url>%2F2018%2F09%2F20%2Flinux-jps%2F</url>
+    <content type="text"><![CDATA[JAVA JPS 命令详解 JPS 名称: jps - Java Virtual Machine Process Status Tool命令用法: jps [options] [hostid] options:命令选项，用来对输出格式进行控制 hostid:指定特定主机，可以是ip地址和域名, 也可以指定具体协议，端口。 [protocol:][[//]hostname][:port][/servername] 功能描述: jps是用于查看有权访问的hotspot虚拟机的进程. 当未指定hostid时，默认查看本机jvm进程，否者查看指定的hostid机器上的jvm进程，此时hostid所指机器必须开启jstatd服务。 jps可以列出jvm进程lvmid，主类类名，main函数参数, jvm参数，jar名称等信息。命令选项及功能：没添加option的时候，默认列出VM标示符号和简单的class或jar名称.如下:1234567[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ jps21794 Jps24243 start.jar21316 start.jar26203 crowd-0.0.1.jar21551 Application[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ -q :仅仅显示VM 标示，不显示jar,class, main参数等信息.1234567[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ jps -q2424321316218502620321551[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ -m:输出主函数传入的参数. 下的hello 就是在执行程序时从命令行输入的参数1234567[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ jps -m24243 start.jar jetty.state=/home/hadoop/jetty-9.2.10-sso-9293/jetty.state jetty-logging.xml jetty-started.xml21316 start.jar jetty.state=/home/hadoop/jetty-9.2.10-um-9291/jetty.state jetty-logging.xml jetty-started.xml21894 Jps -m26203 crowd-0.0.1.jar21551 Application[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ -l: 输出应用程序主类完整package名称或jar完整名称.1234567[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ jps -l21936 sun.tools.jps.Jps24243 /home/hadoop/jetty-9.2.10-sso-9293/start.jar21316 /home/hadoop/jetty-9.2.10-um-9291/start.jar26203 /home/hadoop/crowd/crowd-0.0.1.jar21551 td.enterprise.portal.Application[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ -v: 列出jvm参数, -Xms20m -Xmx50m是启动程序指定的jvm参数1234567[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ jps -v24243 start.jar -Djetty.logs=/home/hadoop/jetty-9.2.10-sso-9293/logs -Djetty.home=/home/hadoop/jetty-9.2.10-sso-9293 -Djetty.base=/home/hadoop/jetty-9.2.10-sso-9293 -Djava.io.tmpdir=/tmp -Dconfig.server.url=http://172.23.6.139:9098/configservice -Dfile.encoding=UTF-8 -Xms512m -Xmx2048m -XX:PermSize=128m -XX:MaxPermSize=256m -Dconfig.local.path=/home/hadoop/jetty-9.2.10-sso-929321316 start.jar -Djetty.logs=/home/hadoop/jetty-9.2.10-um-9291/logs -Djetty.home=/home/hadoop/jetty-9.2.10-um-9291 -Djetty.base=/home/hadoop/jetty-9.2.10-um-9291 -Djava.io.tmpdir=/tmp -Dconfig.server.url=http://172.23.6.139:9098/configservice -Dfile.encoding=UTF-8 -Xms512m -Xmx2048m -XX:PermSize=128m -XX:MaxPermSize=256m -Dconfig.local.path=/home/hadoop/jetty-9.2.10-um-929121978 Jps -Dapplication.home=/home/hadoop/jdk1.8.0_131 -Xms8m26203 crowd-0.0.1.jar -Dspring.profiles.active=prod -Dlogging.path=/home/hadoop/logs21551 Application -Xms1536m -Xmx1536m -Djava.net.preferIPv4Stack=true -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/hadoop/dump/portal[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ -V: 输出通过.hotsportrc或-XX:Flags=指定的jvm参数-Joption:传递参数到javac 调用的java lancher. 扩展jps命令也可使用搜索命令，提高检索效率，如：123[hadoop@sz-pg-smce-cce-014:/home/hadoop]$ jps -l|grep um21316 /home/hadoop/jetty-9.2.10-um-9291/start.jar[hadoop@sz-pg-smce-cce-014:/home/hadoop]$]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>java</tag>
+        <tag>jps</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Linux配置nginx强制使用https访问(http跳转到https)]]></title>
     <url>%2F2018%2F09%2F19%2Flinux-https-rewrite%2F</url>
     <content type="text"><![CDATA[思路最容易想到的方法，将所有的http请求通过rewrite重写到https上即可配置123456server &#123; listen 80; server_name bestsmartfoot.top; rewrite ^(.*)$ https://$host$1 permanent; &#125; 效果搭建此虚拟主机完成后，就可以将http://bestsmartfoot.top、bestsmartfoot.top、www.bestsmartfoot.top的请求全部重写到https://www.bestsmartfoot.top/上了]]></content>

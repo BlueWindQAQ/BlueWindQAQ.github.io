@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-09-19T03:24:57.053Z</updated>
+  <updated>2018-09-21T03:17:04.511Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>异常 The processing instruction target matching [xX][mM][lL] is not allowed</title>
+    <link href="http://blog.bestsmartfoot.top/2018/09/21/Error-xml-01/"/>
+    <id>http://blog.bestsmartfoot.top/2018/09/21/Error-xml-01/</id>
+    <published>2018-09-21T02:44:10.000Z</published>
+    <updated>2018-09-21T03:17:04.511Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="error" scheme="http://blog.bestsmartfoot.top/tags/error/"/>
+    
+      <category term="xml" scheme="http://blog.bestsmartfoot.top/tags/xml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux-JAVA JPS 命令详解</title>
+    <link href="http://blog.bestsmartfoot.top/2018/09/20/linux-jps/"/>
+    <id>http://blog.bestsmartfoot.top/2018/09/20/linux-jps/</id>
+    <published>2018-09-20T02:22:13.000Z</published>
+    <updated>2018-09-20T09:14:49.027Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
+    
+      <category term="java" scheme="http://blog.bestsmartfoot.top/tags/java/"/>
+    
+      <category term="jps" scheme="http://blog.bestsmartfoot.top/tags/jps/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux配置nginx强制使用https访问(http跳转到https)</title>
@@ -416,53 +474,6 @@
     
     
       <category term="tomcat" scheme="http://blog.bestsmartfoot.top/tags/tomcat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>springmvc + mybatis 遍历Map</title>
-    <link href="http://blog.bestsmartfoot.top/2018/08/20/a4/"/>
-    <id>http://blog.bestsmartfoot.top/2018/08/20/a4/</id>
-    <published>2018-08-20T06:49:28.000Z</published>
-    <updated>2018-09-05T08:55:06.276Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;spring的application-xml中&quot;&gt;&lt;a href=&quot;#spring的application-xml中&quot; class=&quot;headerlink&quot; title=&quot;spring的application.xml中&quot;&gt;&lt;/a&gt;spring的application.xml中&lt;/h1&gt;&lt;p&gt;数据源:&lt;br&gt;&lt;figure class=&quot;highlight dust&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- enterpriseUser数据库 --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;bean&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;enterpriseUserDataSource&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;org.apache.commons.dbcp2.BasicDataSource&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;driverClassName&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;$&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;template-variable&quot;&gt;&amp;#123;td.jdbc.enterpriseuser.driverClassName&amp;#125;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;url&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;$&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;template-variable&quot;&gt;&amp;#123;td.jdbc.enterpriseuser.url&amp;#125;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;username&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;$&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;template-variable&quot;&gt;&amp;#123;td.jdbc.enterpriseuser.username&amp;#125;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;password&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;$&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;template-variable&quot;&gt;&amp;#123;td.jdbc.enterpriseuser.password&amp;#125;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;initialSize&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;$&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;template-variable&quot;&gt;&amp;#123;td.jdbc.enterpriseuser.initialSize&amp;#125;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;maxTotal&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;$&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;template-variable&quot;&gt;&amp;#123;td.jdbc.enterpriseuser.maxActive&amp;#125;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;maxIdle&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;$&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;template-variable&quot;&gt;&amp;#123;td.jdbc.enterpriseuser.maxIdle&amp;#125;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;minIdle&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;$&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;template-variable&quot;&gt;&amp;#123;td.jdbc.enterpriseuser.minIdle&amp;#125;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;testOnBorrow&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;$&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;template-variable&quot;&gt;&amp;#123;td.jdbc.enterpriseuser.testOnBorrow&amp;#125;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;validationQuery&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;$&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;template-variable&quot;&gt;&amp;#123;td.jdbc.enterpriseuser.validationQuery&amp;#125;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;bean&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="springmvc" scheme="http://blog.bestsmartfoot.top/tags/springmvc/"/>
-    
-      <category term="mybatis" scheme="http://blog.bestsmartfoot.top/tags/mybatis/"/>
-    
-      <category term="遍历" scheme="http://blog.bestsmartfoot.top/tags/%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>maven settings.xml详解</title>
-    <link href="http://blog.bestsmartfoot.top/2018/08/15/a3/"/>
-    <id>http://blog.bestsmartfoot.top/2018/08/15/a3/</id>
-    <published>2018-08-15T08:16:54.000Z</published>
-    <updated>2018-09-05T08:55:15.422Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;setting-xml配置文件&quot;&gt;&lt;a href=&quot;#setting-xml配置文件&quot; class=&quot;headerlink&quot; title=&quot;setting.xml配置文件&quot;&gt;&lt;/a&gt;setting.xml配置文件&lt;/h1&gt;&lt;p&gt;maven的配置文件&lt;code&gt;settings.xml&lt;/code&gt;存在于两个地方：&lt;/p&gt;
-&lt;p&gt;1.安装的地方：${M2_HOME}/conf/settings.xml&lt;/p&gt;
-&lt;p&gt;2.用户的目录：${user.home}/.m2/settings.xml&lt;/p&gt;
-&lt;p&gt;前者又被叫做全局配置，对操作系统的所有使用者生效；后者被称为用户配置，只对当前操作系统的使用者生效。如果两者都存在，它们的内容将被合并，并且用户范围的settings.xml会覆盖全局的settings.xml。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="maven" scheme="http://blog.bestsmartfoot.top/tags/maven/"/>
     
   </entry>
   
