@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[在Powershell中实现连续命令]]></title>
+    <url>%2F2018%2F09%2F21%2Fwindows-powershell%2F</url>
+    <content type="text"><![CDATA[cmd中有“;”和“&amp;&amp;”来实现命令的连续执行，在Powershell中怎么来实现呢？powershell用”;”实现，亲测有效示例：hexo clean ; hexo g ;hexo s]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>windows10</tag>
+        <tag>powershell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[异常 The processing instruction target matching [xX][mM][lL] is not allowed]]></title>
     <url>%2F2018%2F09%2F21%2FError-xml-01%2F</url>
     <content type="text"><![CDATA[123456789101112131415161718192021[Fatal Error] hive-site.xml:3:6: The processing instruction target matching "[xX][mM][lL]" is not allowed.18/09/21 10:26:53 FATAL conf.Configuration: error parsing conf file:/home/hadoop/apache-hive-1.2.0-bin/conf/hive-site.xmlorg.xml.sax.SAXParseException; systemId: file:/home/hadoop/apache-hive-1.2.0-bin/conf/hive-site.xml; lineNumber: 3; columnNumber: 6; The processing instruction target matching "[xX][mM][lL]" is not allowed. at org.apache.xerces.parsers.DOMParser.parse(Unknown Source) at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source) at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:150) at org.apache.hadoop.conf.Configuration.parse(Configuration.java:2352) at org.apache.hadoop.conf.Configuration.parse(Configuration.java:2340) at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:2408) at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:2374) at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2281) at org.apache.hadoop.conf.Configuration.get(Configuration.java:1108) at org.apache.hadoop.hive.conf.HiveConf.getVar(HiveConf.java:2605) ▽&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;&lt;?xml-stylesheet type="text/xsl" href="configuration.xsl"?&gt;&lt;configuration&gt; &lt;property&gt; 这个异常解释为：xml文件不能被解析，一般出现这样的问题在于xml格式上，并且问题多出现在xml文件的头部，这是因为xml文件头部有两行空行，第三行才开始写总结：&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;前面不要有任何其他字符，如空格、回车、换行这些否则就会出现上面的异常。]]></content>
