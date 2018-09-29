@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-09-21T09:37:59.704Z</updated>
+  <updated>2018-09-29T07:59:10.789Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>在Powershell中实现连续命令</title>
-    <link href="http://blog.bestsmartfoot.top/2018/09/21/windows-powershell/"/>
-    <id>http://blog.bestsmartfoot.top/2018/09/21/windows-powershell/</id>
-    <published>2018-09-21T09:33:06.000Z</published>
-    <updated>2018-09-21T09:37:59.704Z</updated>
+    <title>md5sum使用</title>
+    <link href="http://blog.bestsmartfoot.top/2018/09/29/linux-md5sum/"/>
+    <id>http://blog.bestsmartfoot.top/2018/09/29/linux-md5sum/</id>
+    <published>2018-09-29T07:50:18.000Z</published>
+    <updated>2018-09-29T07:59:10.789Z</updated>
     
     <summary type="html">
     
@@ -35,7 +35,35 @@
     
     </summary>
     
-      <category term="摘录" scheme="http://blog.bestsmartfoot.top/categories/%E6%91%98%E5%BD%95/"/>
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
+    
+      <category term="md5sum使用" scheme="http://blog.bestsmartfoot.top/tags/md5sum%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在Powershell中实现连续命令</title>
+    <link href="http://blog.bestsmartfoot.top/2018/09/21/windows-powershell/"/>
+    <id>http://blog.bestsmartfoot.top/2018/09/21/windows-powershell/</id>
+    <published>2018-09-21T09:33:06.000Z</published>
+    <updated>2018-09-29T08:01:57.772Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
       <category term="windows" scheme="http://blog.bestsmartfoot.top/tags/windows/"/>
@@ -122,9 +150,9 @@
     
       <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
     
-      <category term="nginx" scheme="http://blog.bestsmartfoot.top/tags/nginx/"/>
-    
       <category term="https" scheme="http://blog.bestsmartfoot.top/tags/https/"/>
+    
+      <category term="nginx" scheme="http://blog.bestsmartfoot.top/tags/nginx/"/>
     
   </entry>
   
@@ -458,32 +486,6 @@
       <category term="JVM" scheme="http://blog.bestsmartfoot.top/tags/JVM/"/>
     
       <category term="GC" scheme="http://blog.bestsmartfoot.top/tags/GC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM -XX:NewRatio、-XX:SurvivorRatio参数含义</title>
-    <link href="http://blog.bestsmartfoot.top/2018/08/20/a6/"/>
-    <id>http://blog.bestsmartfoot.top/2018/08/20/a6/</id>
-    <published>2018-08-20T06:58:36.000Z</published>
-    <updated>2018-09-05T08:54:53.591Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-      <category term="JVM" scheme="http://blog.bestsmartfoot.top/tags/JVM/"/>
     
   </entry>
   
