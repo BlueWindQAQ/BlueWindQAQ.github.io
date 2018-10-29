@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://blog.bestsmartfoot.top/2018/10/29/string-reverse/</loc>
+    <lastmod>2018-10-29T09:02:29.816Z</lastmod>
+    <data>
+        <display>
+        <title>前后端实现字符串反转</title>
+        <pubTime>2018-10-29T08:43:41.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>String</tag>
+         
+        <tag>js</tag>
+         
+         
+           
+             
+              <breadCrumb title="开发" url="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.bestsmartfoot.top/2018/09/21/windows-powershell/</loc>
     <lastmod>2018-09-29T08:01:57.772Z</lastmod>
     <data>
@@ -105,9 +129,9 @@
         
         <tag>linux</tag>
          
-        <tag>https</tag>
-         
         <tag>nginx</tag>
+         
+        <tag>https</tag>
          
          
            

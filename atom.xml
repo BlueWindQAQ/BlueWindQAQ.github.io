@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-09-29T07:59:10.789Z</updated>
+  <updated>2018-10-29T09:02:29.816Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前后端实现字符串反转</title>
+    <link href="http://blog.bestsmartfoot.top/2018/10/29/string-reverse/"/>
+    <id>http://blog.bestsmartfoot.top/2018/10/29/string-reverse/</id>
+    <published>2018-10-29T08:43:41.000Z</published>
+    <updated>2018-10-29T09:02:29.816Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;因base64加密后可破解，为了提高安全性，在前端将加密后的密码做字符串反转后提交，然后在后端反转回来再解密。&lt;br&gt;例如:“abcdef”，反转后为“fedcba”，在反转回来“abcdef”。
+    
+    </summary>
+    
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://blog.bestsmartfoot.top/tags/java/"/>
+    
+      <category term="String" scheme="http://blog.bestsmartfoot.top/tags/String/"/>
+    
+      <category term="js" scheme="http://blog.bestsmartfoot.top/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>md5sum使用</title>
@@ -150,9 +174,9 @@
     
       <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
     
-      <category term="https" scheme="http://blog.bestsmartfoot.top/tags/https/"/>
-    
       <category term="nginx" scheme="http://blog.bestsmartfoot.top/tags/nginx/"/>
+    
+      <category term="https" scheme="http://blog.bestsmartfoot.top/tags/https/"/>
     
   </entry>
   
@@ -464,28 +488,6 @@
     
     
       <category term="JVM" scheme="http://blog.bestsmartfoot.top/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM出现频繁GC (Allocation Failure)及young gc时间过长分析</title>
-    <link href="http://blog.bestsmartfoot.top/2018/08/20/a7/"/>
-    <id>http://blog.bestsmartfoot.top/2018/08/20/a7/</id>
-    <published>2018-08-20T06:59:55.000Z</published>
-    <updated>2018-09-05T08:54:49.696Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;本文主要分析一个频繁GC (Allocation Failure)及young gc时间过长的case。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-      <category term="JVM" scheme="http://blog.bestsmartfoot.top/tags/JVM/"/>
-    
-      <category term="GC" scheme="http://blog.bestsmartfoot.top/tags/GC/"/>
     
   </entry>
   
