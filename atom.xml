@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2018-10-29T09:02:29.816Z</updated>
+  <updated>2018-11-01T07:33:19.222Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DES前端js加密后端java解密</title>
+    <link href="http://blog.bestsmartfoot.top/2018/11/01/DES-encry/"/>
+    <id>http://blog.bestsmartfoot.top/2018/11/01/DES-encry/</id>
+    <published>2018-11-01T07:06:00.000Z</published>
+    <updated>2018-11-01T07:33:19.222Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1-wqBJjZ-jqEiZGawtegurg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CryptoJS-v3.1.2下载&lt;/a&gt;&lt;br&gt;密码：25rr&lt;br&gt;直接上代码&lt;br&gt;
+    
+    </summary>
+    
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="js" scheme="http://blog.bestsmartfoot.top/tags/js/"/>
+    
+      <category term="java" scheme="http://blog.bestsmartfoot.top/tags/java/"/>
+    
+      <category term="des" scheme="http://blog.bestsmartfoot.top/tags/des/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gitlab上合并代码</title>
+    <link href="http://blog.bestsmartfoot.top/2018/11/01/gitlab-merge/"/>
+    <id>http://blog.bestsmartfoot.top/2018/11/01/gitlab-merge/</id>
+    <published>2018-11-01T06:53:49.000Z</published>
+    <updated>2018-11-01T07:20:37.463Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用gitlab管理代码，提交代码至dev后要合并到merge上，只需在当前代码线目录下进行如下操作：
+    
+    </summary>
+    
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="gitlab" scheme="http://blog.bestsmartfoot.top/tags/gitlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js java 前后端md5加密</title>
+    <link href="http://blog.bestsmartfoot.top/2018/10/30/Md5-jsjava/"/>
+    <id>http://blog.bestsmartfoot.top/2018/10/30/Md5-jsjava/</id>
+    <published>2018-10-30T07:01:50.000Z</published>
+    <updated>2018-11-01T06:50:45.785Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当做用户登陆、注册的用户名与密码加密时，可以在前端用js定义md5函数对值做哈希，如此用户提交表单后，在网络中路由间传递的便是简单加密后的信息，而非明文信息，等表单提交到后台后，可用md5再次对其进行加密，再行存储。还有很多更稳妥有效的方法，有待学习，先将对md5的初步学习结果记录下来，以备后用。
+    
+    </summary>
+    
+      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="js" scheme="http://blog.bestsmartfoot.top/tags/js/"/>
+    
+      <category term="java" scheme="http://blog.bestsmartfoot.top/tags/java/"/>
+    
+      <category term="md5" scheme="http://blog.bestsmartfoot.top/tags/md5/"/>
+    
+  </entry>
   
   <entry>
     <title>前后端实现字符串反转</title>
@@ -32,11 +100,11 @@
       <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
     
     
+      <category term="js" scheme="http://blog.bestsmartfoot.top/tags/js/"/>
+    
       <category term="java" scheme="http://blog.bestsmartfoot.top/tags/java/"/>
     
       <category term="String" scheme="http://blog.bestsmartfoot.top/tags/String/"/>
-    
-      <category term="js" scheme="http://blog.bestsmartfoot.top/tags/js/"/>
     
   </entry>
   
@@ -148,9 +216,9 @@
       <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
-      <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
-    
       <category term="java" scheme="http://blog.bestsmartfoot.top/tags/java/"/>
+    
+      <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
     
       <category term="jps" scheme="http://blog.bestsmartfoot.top/tags/jps/"/>
     
@@ -423,71 +491,6 @@
     
     
       <category term="redis" scheme="http://blog.bestsmartfoot.top/tags/redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo NexT主题中集成gitalk评论系统</title>
-    <link href="http://blog.bestsmartfoot.top/2018/08/23/hexo-gitalk/"/>
-    <id>http://blog.bestsmartfoot.top/2018/08/23/hexo-gitalk/</id>
-    <published>2018-08-23T05:56:11.000Z</published>
-    <updated>2018-09-05T08:53:53.019Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录在NexT主题中添加gitalk评论系统的步骤。&lt;br&gt;gitalk：一个基于 Github Issue 和 Preact 开发的评论插件&lt;br&gt;详情Demo可见：&lt;a href=&quot;https://gitalk.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://gitalk.github.io/&lt;/a&gt;
-    
-    </summary>
-    
-      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="hexo" scheme="http://blog.bestsmartfoot.top/tags/hexo/"/>
-    
-      <category term="博客" scheme="http://blog.bestsmartfoot.top/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo添加右侧公众号</title>
-    <link href="http://blog.bestsmartfoot.top/2018/08/23/hexo-wechat-qrcode/"/>
-    <id>http://blog.bestsmartfoot.top/2018/08/23/hexo-wechat-qrcode/</id>
-    <published>2018-08-23T02:09:36.000Z</published>
-    <updated>2018-09-05T08:53:46.960Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;hexo添加右侧公众号页面需在两处添加代码&lt;br&gt;1、css&lt;br&gt;css添加在主题文件下的source/css/_schemes/主题名称文件夹/_layout
-    
-    </summary>
-    
-      <category term="开发" scheme="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="hexo" scheme="http://blog.bestsmartfoot.top/tags/hexo/"/>
-    
-      <category term="博客" scheme="http://blog.bestsmartfoot.top/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM大对象直接进入老年代</title>
-    <link href="http://blog.bestsmartfoot.top/2018/08/20/a8/"/>
-    <id>http://blog.bestsmartfoot.top/2018/08/20/a8/</id>
-    <published>2018-08-20T07:02:16.000Z</published>
-    <updated>2018-09-05T08:54:44.954Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;原文：&lt;a href=&quot;https://book.2cto.com/201306/25496.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://book.2cto.com/201306/25496.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;虚拟机提供了一个&lt;code&gt;-XX:PretenureSizeThreshold&lt;/code&gt;参数，令大于这个设置值的对象直接在老年代分配。这样做的目的是避免在Eden区及两个Survivor区之间发生大量的内存复制（复习一下：新生代采用复制算法收集内存）。
-    
-    </summary>
-    
-      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-      <category term="JVM" scheme="http://blog.bestsmartfoot.top/tags/JVM/"/>
     
   </entry>
   

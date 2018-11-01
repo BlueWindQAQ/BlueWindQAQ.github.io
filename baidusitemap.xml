@@ -4,6 +4,74 @@
 
     
   <url>
+    <loc>http://blog.bestsmartfoot.top/2018/11/01/DES-encry/</loc>
+    <lastmod>2018-11-01T07:33:19.222Z</lastmod>
+    <data>
+        <display>
+        <title>DES前端js加密后端java解密</title>
+        <pubTime>2018-11-01T07:06:00.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>java</tag>
+         
+        <tag>des</tag>
+         
+         
+           
+             
+              <breadCrumb title="开发" url="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.bestsmartfoot.top/2018/11/01/gitlab-merge/</loc>
+    <lastmod>2018-11-01T07:20:37.463Z</lastmod>
+    <data>
+        <display>
+        <title>gitlab上合并代码</title>
+        <pubTime>2018-11-01T06:53:49.000Z</pubTime>
+        
+        <tag>gitlab</tag>
+         
+         
+           
+             
+              <breadCrumb title="开发" url="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.bestsmartfoot.top/2018/10/30/Md5-jsjava/</loc>
+    <lastmod>2018-11-01T06:50:45.785Z</lastmod>
+    <data>
+        <display>
+        <title>js java 前后端md5加密</title>
+        <pubTime>2018-10-30T07:01:50.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>java</tag>
+         
+        <tag>md5</tag>
+         
+         
+           
+             
+              <breadCrumb title="开发" url="http://blog.bestsmartfoot.top/categories/%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.bestsmartfoot.top/2018/10/29/string-reverse/</loc>
     <lastmod>2018-10-29T09:02:29.816Z</lastmod>
     <data>
@@ -11,11 +79,11 @@
         <title>前后端实现字符串反转</title>
         <pubTime>2018-10-29T08:43:41.000Z</pubTime>
         
+        <tag>js</tag>
+         
         <tag>java</tag>
          
         <tag>String</tag>
-         
-        <tag>js</tag>
          
          
            
@@ -103,9 +171,9 @@
         <title>linux-JAVA JPS 命令详解</title>
         <pubTime>2018-09-20T02:22:13.000Z</pubTime>
         
-        <tag>linux</tag>
-         
         <tag>java</tag>
+         
+        <tag>linux</tag>
          
         <tag>jps</tag>
          
@@ -467,9 +535,9 @@
         <title>java实现excel模板导出数据</title>
         <pubTime>2018-07-06T09:14:58.000Z</pubTime>
         
-        <tag>excel</tag>
-         
         <tag>java</tag>
+         
+        <tag>excel</tag>
          
         <tag>模板</tag>
          
