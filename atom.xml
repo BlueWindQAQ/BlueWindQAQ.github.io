@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.bestsmartfoot.top/"/>
-  <updated>2019-02-13T06:26:59.622Z</updated>
+  <updated>2019-02-14T06:45:59.911Z</updated>
   <id>http://blog.bestsmartfoot.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos tar包安装mysql5.7</title>
+    <link href="http://blog.bestsmartfoot.top/2019/02/14/linux-mysql/"/>
+    <id>http://blog.bestsmartfoot.top/2019/02/14/linux-mysql/</id>
+    <published>2019-02-14T06:23:36.000Z</published>
+    <updated>2019-02-14T06:45:59.911Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1、由于在线安装受制于网络环境，所以选择tar包编译安装。&lt;br&gt;首先去mysql镜像站下载mysql-5.7.17-linux-glibc2.5-x86_64.tar.gz
+    
+    </summary>
+    
+      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
+    
+      <category term="mysql" scheme="http://blog.bestsmartfoot.top/tags/mysql/"/>
+    
+      <category term="虚拟机" scheme="http://blog.bestsmartfoot.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>虚拟机连通外网配置</title>
@@ -477,28 +501,6 @@
     
     
       <category term="webstorm" scheme="http://blog.bestsmartfoot.top/tags/webstorm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>crontab命令</title>
-    <link href="http://blog.bestsmartfoot.top/2018/08/29/linux-crontab/"/>
-    <id>http://blog.bestsmartfoot.top/2018/08/29/linux-crontab/</id>
-    <published>2018-08-29T02:39:09.000Z</published>
-    <updated>2018-09-05T08:52:39.284Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;crontab命令被用来提交和管理用户的需要周期性执行的任务，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
-    
-    </summary>
-    
-      <category term="运维" scheme="http://blog.bestsmartfoot.top/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-      <category term="linux" scheme="http://blog.bestsmartfoot.top/tags/linux/"/>
-    
-      <category term="crontab" scheme="http://blog.bestsmartfoot.top/tags/crontab/"/>
     
   </entry>
   
